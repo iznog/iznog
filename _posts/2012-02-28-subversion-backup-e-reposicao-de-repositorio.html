@@ -1,0 +1,10 @@
+---
+layout: post
+title: Subversion - Backup e reposicao de repositorio
+date: 2012-02-28
+comments: false
+---
+
+<div class='post'>
+Tenho por norma um repositório subversion para  guardar alguns conteúdos que normalmente uso e eventualmente terei a necessidade de reaver versões anteriores.<br /><br />No entanto é necessário também fazer backups. <br /><br />Para efectuar backup do repositorio executo o comando:<br /><pre>svnadmin dump /caminho_do_repositorio &gt;backup_repositorio.svn</pre><pre>gzip backup_repositorio.svn</pre><br />Para efectuar a reposição do mesmo poderemos fazer:<br /><pre>gunzip backup_repositorio.svn.gz</pre><pre>svnadmin create /caminho_novo_repositorio</pre><pre>svnadmin load /caminho_novo_repositorio &lt;backup_repositorio.svn </pre><br /><br /><br /><br /><br /></div>
+

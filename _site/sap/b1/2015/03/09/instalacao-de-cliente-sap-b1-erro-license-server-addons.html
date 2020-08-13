@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+	<div id="header">	
+        	<title>Erro de ligacao ao servidor de licenças pelos add-ons</title>
+	        <meta name="viewport" content="width=device-width">
+	</div>
+	<div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
+            <a class="extra" href="/">Blog</a>
+            <a class="extra" href="/sobre/">Sobre</a>
+        </div>
+    </head>
+    <body>
+
+        
+          <h1>Erro de ligacao ao servidor de licenças pelos add-ons</h1>
+
+<p>Após instalação do cliente de SAP B1 em Windows Server 2008 R2 e instalação sem quaisquer contratempos dos respectivos add-ons disponiveis, para a empresa em uso, os add-ons davam erro a iniciar, com mensagem de erro relacionada com a impossibilidade de se ligarem ao servidor de licenças.</p>
+
+<p>Este erro acontecia, apesar de conseguir entrar sem problemas no SAP B1.</p>
+
+<p>Após diversas verificações de todos os ficheiros de configuração do SAP e dos add-ons, assim como da reinstalação, do cliente SAP e respectivos add-ons, continuei com o mesmo problema.</p>
+
+<p>No scn.sap.com, encontrei este <a href="http://scn.sap.com/thread/3215229">thread</a> de alguém com o mesmo problema.</p>
+
+<p>A solução passou por copiar o ficheiro localizado em </p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="ss">c</span><span class="p">:\</span><span class="no">Program</span> <span class="n">files</span> <span class="p">(</span><span class="n">x86</span><span class="p">)\</span><span class="no">SAP</span><span class="p">\</span><span class="no">SAP</span> <span class="no">Business</span> <span class="no">One</span><span class="p">\</span><span class="no">Conf</span><span class="p">\</span><span class="n">b1</span><span class="o">-</span><span class="n">local</span><span class="o">-</span><span class="n">machine</span><span class="o">.</span><span class="n">xml</span></code></pre></figure>
+
+<p>para a pasta de instalação da DI API em </p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="ss">c</span><span class="p">:\</span><span class="no">Program</span> <span class="n">files</span> <span class="p">(</span><span class="n">x86</span><span class="p">)\</span><span class="no">SAP</span><span class="p">\</span><span class="no">SAP</span> <span class="no">Business</span> <span class="no">One</span> <span class="no">DI</span> <span class="no">API</span><span class="p">\</span></code></pre></figure>
+
+<p>sobrepondo o ficheiro que lá se encontrava, que aparentemente não foi actualizado durante a instalação.</p>
+
+<p>Após esta alteração, ficaram os add-ons a funcionar como seria de esperar.</p>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                paulocruz.com.pt<br />
+              </p>
+            </div>
+	    <div class="contact">
+              <p>
+                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+    </body>
+</html>

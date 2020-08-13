@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+	<div id="header">	
+        	<title>Fazer o upload do site criado com o jekyll de forma facil com o glynn</title>
+	        <meta name="viewport" content="width=device-width">
+	</div>
+	<div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
+            <a class="extra" href="/">Blog</a>
+            <a class="extra" href="/sobre/">Sobre</a>
+        </div>
+    </head>
+    <body>
+
+        
+          <h1>Fazer o upload do site criado com o jekyll de forma facil com o glynn</h1>
+
+<p>Para não ter que efectuar o upload do site manualmente para o alojamento por FTP, após efectuar o &quot;build&quot; do mesmo com o jekyll, acabei por encontrar referenciado no site do <a href="http://jekyllrb.com">jekyll</a> o projecto glynn de <a href="https://github.com/dmathieu/glynn">Damien MATHIEU</a> que permite fazer o build do site e o upload apenas com o comando &quot;glynn&quot;, simplificando bastante o processo.</p>
+
+<p>De momento estou a usar o <a href="http://xubuntu.org/">Xubuntu</a> pelo que vou enumerar os passos que usei para instalar o jekyll e o glynn</p>
+
+<p>Para instalar o jekyll é tão simples como abrir um terminal e com um utilizador que tenha permissões para instalar aplicações, digitar:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">jekyll</span></code></pre></figure>
+
+<p>Após a instalação do jekyll foi necessário instalar o ruby-dev, pois dava erro ao fazer o build do glynn sem este pacote.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ruby</span><span class="o">-</span><span class="n">dev</span></code></pre></figure>
+
+<p>De seguida só é necessário executar o comando que se encontra na página do Damien Mathieu </p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="n">gem</span> <span class="n">install</span> <span class="n">glynn</span> <span class="o">--</span><span class="n">source</span> <span class="ss">http</span><span class="p">:</span><span class="sr">//</span><span class="n">gemcutter</span><span class="o">.</span><span class="n">org</span></code></pre></figure>
+
+<p>Se tudo correr como previsto o glynn será instalado.</p>
+
+<p>Será necessário no projecto, no ficheiro _config.yml efectuar a configuração dos dados da localização e login do servidor FTP de destino.</p>
+
+<p>Exemplo do ficheiro _config.yml:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">name</span><span class="p">:</span> <span class="n">endere</span><span class="err">ç</span><span class="n">o</span> <span class="k">do</span> <span class="n">site</span>
+<span class="ss">markdown</span><span class="p">:</span> <span class="n">redcarpet</span>
+<span class="ss">highlighter</span><span class="p">:</span> <span class="n">pygments</span>
+
+<span class="ss">ftp_host</span><span class="p">:</span> <span class="s1">&#39;endereco do servidor ftp&#39;</span>
+<span class="ss">ftp_dir</span><span class="p">:</span> <span class="s1">&#39;/public/www&#39;</span>
+<span class="ss">ftp_passive</span><span class="p">:</span> <span class="kp">false</span>
+
+<span class="c1"># optional</span>
+<span class="ss">ftp_port</span><span class="p">:</span> <span class="mi">21</span>                  <span class="c1"># default 21</span>
+<span class="ss">ftp_username</span><span class="p">:</span> <span class="s1">&#39;ftpuser&#39;</span>     <span class="c1"># default read from stdin</span>
+<span class="ss">ftp_password</span><span class="p">:</span> <span class="s1">&#39;ftppassword&#39;</span> <span class="c1"># default read from stdin</span></code></pre></figure>
+
+<p>De seguida, estando na raiz da estrutura de pasta do site, basta digitar &quot;glynn&quot;.</p>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                paulocruz.com.pt<br />
+              </p>
+            </div>
+	    <div class="contact">
+              <p>
+                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+    </body>
+</html>

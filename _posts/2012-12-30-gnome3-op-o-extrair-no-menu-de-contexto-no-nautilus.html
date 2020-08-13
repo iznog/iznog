@@ -1,0 +1,10 @@
+---
+layout: post
+title: Gnome3 - opção "Extrair" no menu de contexto no nautilus
+date: 2012-12-30
+comments: false
+---
+
+<div class='post'>
+Se após a instalação do wheezy com gnome3 não aparece a opção para extrair ou comprimir ficheiros no menu de contexto do nautilus, deverão verificar se o file-roller está instalado:<br /><br /><pre>sudo dpkg -l file-roller*<br /></pre><br />Para instalar:<br /><br /><pre>sudo apt-get install file-roller<br /></pre><br />E de seguida podemos reiniciar o Nautilus para aparecerem as opções (sem reiniciar a sessão)<br /><br /><pre>sudo kill -s HUP `pidof nautilus`<br /></pre><br>Se tentarem usar agora o nautilus já deverão aparecer as opções "comprimir" no menu de contexto, assim como a opção "extrair aqui" se seleccionarem um ficheiro comprimido.</div>
+

@@ -1,0 +1,10 @@
+---
+layout: post
+title: Lunacloud servers - Iniciar e parar servidor(es)
+date: 2013-01-07
+comments: false
+---
+
+<div class='post'>
+Para quem usar os serviços da Lunacloud, poderá iniciar ou parar máquinas virtuais sem aceder ao painel de control.  Para atingir esse fim e se estiver a usar linux, poderá por exemplo instalar a aplicação curl (caso ainda não a tenha instalada):  <br /><pre>sudo apt-get install curl<br /></pre>Para listar as máquinas virtuais de uma conta: <br /><pre>curl --user utilizador:password -G  http://apicontrol.lunacloud.com:4465/paci/v1.0/ve<br /></pre>Será devolvido o conteudo XML na qual serão listadas as VM's. <br />Para iniciar uma máquina virtual: <br /><pre>curl --user utilizador:password -X PUT http://apicontrol.lunacloud.com:4465/paci/v1.0/ve/nomedamaquinavirtual/start<br /></pre>Para parar uma máquina virtual: <br /><pre>curl --user utilizador:password -X PUT http://apicontrol.lunacloud.com:4465/paci/v1.0/ve/nomedamaquinavirtual/stop<br /></pre></div>
+

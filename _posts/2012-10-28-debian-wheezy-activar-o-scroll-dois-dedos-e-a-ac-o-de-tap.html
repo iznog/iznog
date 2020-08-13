@@ -1,0 +1,10 @@
+---
+layout: post
+title: debian wheezy - activar o scroll dois dedos e a acção de tap
+date: 2012-10-28
+comments: false
+---
+
+<div class='post'>
+Ao instalar o wheezy no meu portatil, deixei de poder usar os dois dedos para fazer o scroll e o tap (simulação do click com o botão direito).<br /><br />Depois de alguma pesquisa encontrei <a href="http://forums.debian.net/viewtopic.php?p=354960" target="_blank">este artigo</a> nos forums de utilizadores Debian.<br /><br />Então o que fiz foi criar o ficheiro 42-synaptics.conf na directoria <br /><pre>/etc/X11/xorg.conf.d/</pre>e coloquei o seguinte conteudo:<br /><pre>Section "InputClass"<br />    Identifier          "touchpad tweaked catchall"<br />    MatchIsTouchpad     "on"<br />    Driver              "synaptics"<br /><br />    Option              "TapButton1" "1"<br />    Option              "TapButton2" "3"<br />    Option              "TapButton3" "2"<br /><br />    Option              "SpecialScrollAreaRight" "false"<br />    Option              "VertEdgeScroll" "false"<br />    Option              "VertTwoFingerScroll" "true"<br /><br />    Option              "RTCornerButton" "3"<br />    Option              "RBCornerButton" "3"<br />    Option              "LTCornerButton" "2"<br />    Option              "LBCornerButton" "2"<br />EndSection<br /></pre><br />Após reiniciar o S.O. ficou a funcionar.<br /><span style="font-weight: bold;"></span></div>
+

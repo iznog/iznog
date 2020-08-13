@@ -1,0 +1,10 @@
+---
+layout: post
+title: Configuração de modem 3g no Debian Wheezy XFCE
+date: 2012-11-18
+comments: false
+---
+
+<div class='post'>
+Na instalação por defeito do debian Wheezy, o meu modem 3G ZTE MF636 da TMN não funciona com o Network manager.<br /><br />Assim inicialmente instalei o wvdial e o usb-modeswitch e configurei o wvdial.conf para poder iniciar manualmente a ligação.<br /><br />No entanto algumas aplicações usam o DBUS para detectar a existência de uma ligação de rede para poderem tentar a ligação, sendo uma dessas aplicações, o pidgin.<br /><br />Assim e para tentar ultrapassar essa questão &nbsp;e facilitar a ligação, procurei informação como poderia fazer com que o network manager instalado por defeito pudesse detectar o modem 3G e efectuar a ligação através do mesmo.<br />Foi este <a href="http://cumanadigital.blogspot.pt/2011/06/configurar-modem-3g-usb-movilnet.html" target="_blank">artigo</a>&nbsp;que me ajudou a terminar a configuração.<br /><br />Assim instalei os pacotes modemmanager e gnome-ppp que me faltavam:<br /><br /><pre>apt-get install modemmanager gnome-ppp<br /></pre><br />Configurei no network manager a ligação:<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="/assets/nm-tmn.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="303" src="/assets/nm-tmn.png" width="320" /></a></div><br /><br />Ficou a funcionar correctamente, facilitando o estabelecimento da ligação 3G.<br /><br /><br /><br /></div>
+

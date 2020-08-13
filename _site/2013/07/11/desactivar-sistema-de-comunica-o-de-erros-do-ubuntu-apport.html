@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+	<div id="header">	
+        	<title>Desactivar sistema de comunicação de erros do Ubuntu (apport)</title>
+	        <meta name="viewport" content="width=device-width">
+	</div>
+	<div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
+            <a class="extra" href="/">Blog</a>
+            <a class="extra" href="/sobre/">Sobre</a>
+        </div>
+    </head>
+    <body>
+
+        
+          <h2>Desactivar sistema de comunicação de erros do Ubuntu (apport)</h2>
+<p class="meta">11 Jul 2013</p>
+
+<div class="post">
+<div class='post'>
+Quando em utilização normal e por defeito o Ubuntu a partir da versão 12.04 poderá desencadear alertas de aplicações que apresentaram erros na sua execução.<br />Sendo que muitas vezes, esses erros são menos relevantes para o utilizador, ou simplesmente porque não pretendemos ser constantemente incomodados por estes alertas, poderemos desactivar o serviço que gere estas comunicações ao utilizador (apport).<br /><br />Para desactivar o sistema de notificação e comunicação de erros do sistema - serviço apport - pode-se proceder da seguinte forma:<br /><br />Editar o ficheiro /etc/default/apport <pre>gedit /etc/default/apport<br /></pre>alterar a linha que se encontra como <br /> <pre>enable=1</pre> para<br /> <pre>enable=0</pre><br /> Em alternativa se pretendermos apenas desactivar serviço temporariamente podemos optar pelos seguintes passos.<br /><br />Procurar e iniciar a aplicação "Terminal" e executar o seguinte comando <pre>sudo service apport stop</pre> Nota: é necessário ter direitos de administração no sistema que pretendemos configurar.</div>
+
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                paulocruz.com.pt<br />
+              </p>
+            </div>
+	    <div class="contact">
+              <p>
+                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+    </body>
+</html>

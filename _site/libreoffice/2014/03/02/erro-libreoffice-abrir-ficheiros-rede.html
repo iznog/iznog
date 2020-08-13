@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+	<div id="header">	
+        	<title>Libreoffice erro abrir ficheiros rede no KDE</title>
+	        <meta name="viewport" content="width=device-width">
+	</div>
+	<div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
+            <a class="extra" href="/">Blog</a>
+            <a class="extra" href="/sobre/">Sobre</a>
+        </div>
+    </head>
+    <body>
+
+        
+          <h1>Libreoffice - erro a abrir ficheiros de rede no KDE</h1>
+
+<p>Se ao tentar abrir ficheiros com o libreoffice no KDE de um recurso da rede, nada acontece, pode dever-se a um bug existente e reportado <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=67527">aqui</a>, sendo que já referi o mesmo no meu <a href="/2013/11/19/libreoffice-4-1-do-ppa-de-libreoffice-org-erro-abrir-ficheiro-de-partilha-samba.html">post</a>.</p>
+
+<p>Para corrigir o problema, enquanto o problema não é corrigido em alguma actualização, devemos nos atalhos do libreoffice localizados em /usr/share/applications, comentar a linha &quot;X-KDE-Protocols=file,http,smb,ftp,webdav&quot;.</p>
+
+<p>Aproveitando a sugestão colocada no comentário #47 ao report do bug referenciado acima, podemos fazer o seguinte:</p>
+
+<ul>
+<li>abrir um terminal, no kde podemos usar o konsole</li>
+<li>executar o seguinte:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s/X-KDE-Protocols=file,http,smb,ftp,webdav/#X-KDE-Protocols=file,http,smb,ftp,webdav/&#39;</span> <span class="sr">/usr/s</span><span class="n">hare</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="n">libreoffice</span><span class="o">-*</span></code></pre></figure>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                paulocruz.com.pt<br />
+              </p>
+            </div>
+	    <div class="contact">
+              <p>
+                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+    </body>
+</html>

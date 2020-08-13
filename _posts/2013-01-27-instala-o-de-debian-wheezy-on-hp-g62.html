@@ -1,0 +1,10 @@
+---
+layout: post
+title: Instalação de debian wheezy on HP G62
+date: 2013-01-27
+comments: false
+---
+
+<div class='post'>
+A instalação do portátil HP G62 com placa grafica intel i915 não permitia a utilização do mesmo normalmente, apenas permitindo a utilização com um monitor externo.<br /><br /><br />Solução passou por efectuar a alteração no ficheiro <pre>/etc/default/acpi-support</pre> de forma a que em vez de <pre><br />DISPLAY_DPMS=xset<br /></pre>Colocamos o seguinte <pre><br />DISPLAY_DPMS=xrandr<br /></pre>Após reiniciar o computador, passou a apresentar a imagem correctamente. </div>
+

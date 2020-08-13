@@ -1,0 +1,10 @@
+---
+layout: post
+title: Utilização do sudo com debian wheezy
+date: 2012-10-28
+comments: false
+---
+
+<div class='post'>
+Em algumas distribuições actuais, durante a instalação poderemos nalguns casos definir quais os utilizadores que poderão efectuar tarefas de administração, elevando os seus privilégios através da utilização do sudo.<br /><br />Em debian não existe essa possibilidade durante a instalação (ou pelo menos não a vi).<br /><br />Então na minha instalação, apenas foi preciso fazer o seguinte:<br /><pre>su</pre><pre>&nbsp;</pre>colocar a password de root, definida durante a instalação (caso não tenha sido mudada entretanto);<br /><br />Instalar o sudo<br /><pre>apt-get install sudo</pre><br />Colocar o utilizador que se pretende no grupo sudo.<br /><br />Da próxima vez que o utilizador em causa efectuar o login, já poderá executar comandos até aí disponíveis apenas para o utilizador root.<br /><br /><br /></div>
+

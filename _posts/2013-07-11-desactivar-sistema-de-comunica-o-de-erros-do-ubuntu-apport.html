@@ -1,0 +1,10 @@
+---
+layout: post
+title: Desactivar sistema de comunicação de erros do Ubuntu (apport)
+date: 2013-07-11
+comments: false
+---
+
+<div class='post'>
+Quando em utilização normal e por defeito o Ubuntu a partir da versão 12.04 poderá desencadear alertas de aplicações que apresentaram erros na sua execução.<br />Sendo que muitas vezes, esses erros são menos relevantes para o utilizador, ou simplesmente porque não pretendemos ser constantemente incomodados por estes alertas, poderemos desactivar o serviço que gere estas comunicações ao utilizador (apport).<br /><br />Para desactivar o sistema de notificação e comunicação de erros do sistema - serviço apport - pode-se proceder da seguinte forma:<br /><br />Editar o ficheiro /etc/default/apport <pre>gedit /etc/default/apport<br /></pre>alterar a linha que se encontra como <br /> <pre>enable=1</pre> para<br /> <pre>enable=0</pre><br /> Em alternativa se pretendermos apenas desactivar serviço temporariamente podemos optar pelos seguintes passos.<br /><br />Procurar e iniciar a aplicação "Terminal" e executar o seguinte comando <pre>sudo service apport stop</pre> Nota: é necessário ter direitos de administração no sistema que pretendemos configurar.</div>
+

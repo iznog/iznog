@@ -1,0 +1,10 @@
+---
+layout: post
+title: Converter character sets de ficheiros de texto
+date: 2012-02-27
+comments: false
+---
+
+<div class='post'>
+&nbsp;No decorrer do desenvolvimento de um projecto, efectuado numa máquina  de desenvolvimento baseado em Windows, verificou-se a necessidade da  conversão do ficheiro resultante para efectuar a importação do ficheiro  de SQL no servidor da base de dados.       Esta necessidade surgiu pelo facto de que o servidor Web apresentava  os caracteres de forma errada obtidos na BD, pois estava a usar o  character set UTF8.<br />O conteudo do ficheiro SQL foi convertido então para o "latin1" usando a aplicação iconv.<br /><br />Comando usado:<br /><br /><pre>iconv -c --from-code CP1251 --to-code UTF8 bd_desenvolvimento.sql &gt;bd_convertido.sql</pre><pre>&nbsp;</pre>Esta conversão foi efectuada em Ubuntu 11.04 e o projecto foi instalado num servidor ubuntu 10.04LTS.</div>
+

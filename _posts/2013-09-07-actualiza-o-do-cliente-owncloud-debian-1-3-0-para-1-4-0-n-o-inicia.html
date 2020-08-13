@@ -1,0 +1,11 @@
+---
+layout: post
+title: Actualização do cliente Owncloud Debian 1.3.0 para 1.4.0 - não inicia
+date: 2013-09-07
+comments: false
+---
+
+<div class='post'>
+Se ao actualizar o cliente para Debian do owncloud da versão 1.3.0 para a versão 1.4.0, o mesmo deixar de funcionar, deve ser actualizada a libraria libocsync0 manualmente, visto que não é actualizada aquando da actualização do cliente.<br /><br />Para isso deve abrir um terminal e obter a shell de root com :<br /><pre>su<br /></pre><br />Instalar a libraria:<br /><pre>apt-get install libocsync0<br /></pre><br />Após isto as librarias necessárias serão actualizadas e o cliente já deverá iniciar normalmente.</div>
+<h2>Comments</h2>
+

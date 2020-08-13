@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+	<div id="header">	
+        	<title>Recuperação de mensagens do Zimbra opensource edition</title>
+	        <meta name="viewport" content="width=device-width">
+	</div>
+	<div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
+            <a class="extra" href="/">Blog</a>
+            <a class="extra" href="/sobre/">Sobre</a>
+        </div>
+    </head>
+    <body>
+
+        
+          <h2>Recuperação de mensagens do Zimbra opensource edition</h2>
+<p class="meta">27 Feb 2012</p>
+
+<div class="post">
+<div class='post'>
+Na utilização do Zimbra v7 open source edition, não existe nenhuma ferramenta para efectuar os backups.<br />Assim  após ter efectuado os backups para um servidor de backups por rsync  (passos que colocarei mais tarde), importa ter a certeza como recuperar  os ficheiros no caso de necessidade de reposição das mensagens de uma  conta.<br />As mensagens encontram-se na pasta /opt/zimbra/store , sendo que dentro desta temos duas subpastas "0" e "incoming".<br />As  mensagens encontram-se na pasta "0" e dentro desta teremos várias  pastas também com numeros que corresponde uma&nbsp; a cada utilizador.<br />Primeiro problema... qual a pasta do utilizador em questão?<br />Solução encontrada, fazer os seguintes passos:<br />Usar o utilizador zimbra:<br /><pre>su - zimbra</pre><br />Procurar a password do mysql:<br /><pre>zmlocalconfig -s | grep mysql | grep password</pre><br />Deverá aparecer várias linhas em que uma delas será a password de root do mysql.<br />De seguida encontrar o id do utilizador:<br /><pre>mysql -u root -p</pre><br /><br />Colocar a password obtida anteriormente.<br /><pre>mysql&gt;use zimbra;<br />mysql&gt;SELECT id FROM mailbox where comment like '%&lt;utilizadorzimbra&gt;%';<br /></pre><br /><br /><br /><br />Iremos obter um id que corresponderá ao nome da pasta (um numero) que contêm as mensagens.<br />Após isto já saberemos qual a pasta do utilizador em questão e acedendo à pasta do mesmo poderemos obter as mensagens.<br />Segundo problema ... as subpastas numeradas correspondem a que pasta na lista do utilizador?<br />Não sei :)&nbsp; "trial and error", o que podemos fazer é repor as mensagens na conta do utilizador.<br />Ver  o link  http://www.zimbra.com/forums/installation/12617-recover-data-store-folders.html  que contêm algumas sugestões que poderão ajudar.<br />O que eu fiz foi  copiar as mensagens do servidor de backup de volta para o servidor do  zimbra para a pasta /opt/zimbra/backup e de seguida importei as  mensagens para a conta do utilizador:<br />Assumindo que as subpastas encontram-se em /opt/zimbra/backup/&lt;idutilizador&gt;/ usei os seguintes comandos:<br /><br /><pre>zmmailbox adminAuthenticate &lt;utilizadoradmin&gt; &lt;password&gt;<br />zmmailbox -zadmin</pre><br />Seleccionar a mailbox para efectuar a reposicao<br /><pre>selectMailbox user@domain</pre><br />Criei uma pasta para cada das pastas que pretendia repôr:<br /><pre>mbox&gt;createFolder /Recuperacao&lt;numero da pasta&gt;<br />mbox&gt;addMessage /Recuperacao&lt;numero da pasta&gt; backup/&lt;idutilizador&gt;/&lt;numero da pasta&gt;<br /></pre><br />Repeti o createFolder e o addMessage para cada uma das pastas que pretendia repôr.<br />para sair <br /><pre>exit</pre><br />até sair da consola/sessão.<br />No final o utilizador terá nessas pastas as mensagens do backup com as quais poderá fazer o que pretender.<br />Nota: atenção às quotas dos utilizadores, caso estejam definidas, para que não se chegue ao limite da mesma.<br />Caso  isso seja um problema, o melhor será criar um utilizador novo e  importar para esse as mensagens, efectuar o tratamento necessário nesse  utilizador e eventualmente sincronizar as mesmas com o imapsync (ou  qualquer outro utilitário que sincronize as contas imap).</div>
+
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                paulocruz.com.pt<br />
+              </p>
+            </div>
+	    <div class="contact">
+              <p>
+                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,10 @@
+---
+layout: post
+title: Configuração de wdial para ligar 3G
+date: 2012-02-27
+comments: false
+---
+
+<div class='post'>
+Para se poder ligar através de modem 3G pode-se usar as configurações como se segue:<br />[Dialer tmn]<br />Modem = /dev/ttyUSB0<br />Stupid Mode = 1<br />Dial Command = ATDT<br />Phone = *99#<br />Baud = 460800<br />ISDN = 0<br />Username = tmn<br />Password = tmn<br />Modem Type = Analog Modem<br />Init2 = ATZ<br />#Init3 = AT+CPIN=9862<br />Init4 = AT+CGDCONT=1,"IP","internet"<br />ISDN = 0<br /><br />Dependendo  dos modems usados podemos ter que mudar as configurações e por exemplo  usar outra porta para os dados em vez da ttyUSB0, como por exemplo:<br />[Dialer Defaults]<br />Modem = /dev/ttyUSB2<br />Modem Type = Analog Modem<br />ISDN = 0<br />Baud = 460800<br />Dial Attempts = 1<br />Username = tmn<br />Password = tmn<br />Init1 = ATZ<br />Init2 = AT&amp;F &amp;D2 &amp;C1<br />Init3 = ATS7=60 S30=0 S0=0<br />Init4 = AT+CGDCONT=1,"IP","internet"<br />Phone = *99***1#<br />Stupid Mode = 1<br />Estas  configurações no momento já não mantenho referência exacta de quais os  modems com que usei, mas do 2º exemplo julgo ter sido usado com o ZTE  MF636.<br /><br /><br />Data referência deste artigo 2011/07/18</div>
+

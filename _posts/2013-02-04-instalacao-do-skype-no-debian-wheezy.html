@@ -1,0 +1,10 @@
+---
+layout: post
+title: Instalacao do Skype no debian wheezy
+date: 2013-02-04
+comments: false
+---
+
+<div class='post'>
+Para instalar o skype no debian wheezy, deveremos aceder ao site www.skype.com e descarregar a versão para debian 7.0 (multiarch).<br /><br />Abrir uma consola<br /><br />Verificar qual a arquitectura que está instalada (caso não saiba):<br /><pre>uname -a<br /></pre>Caso a instalação seja de 32 bits então deverá aparecer no resultado a referência a "i686", no caso de 64 bits, deverá aparecer "amd64" <br />No caso de instalação na arquitectura de 32 bits, deverá ser necessário apenas efectuar os seguintes comandos: <br /><pre>su<br />dpkg -i caminho_para_o_ficheiro_instalacao_skype<br />apt-get -f install<br /></pre>No caso de instalação na arquitectura de 64 bits, deverá ser necessário verificar quais as arquitecturas para o qual o dpkg está configurado para instalar: <br /><pre>su<br />dpkg --print-foreign-architectures<br /></pre>Caso não apareça como resultado "i386", deveremos efectuar os seguintes comandos: <br /><pre>dpkg --add-architecture i386<br />apt-get update<br /></pre>De seguida efectuar os comandos seguintes para efectuar a instalação do skype: <br /><pre>dpkg -i caminho_para_o_ficheiro_instalacao_skype<br />apt-get -f install<br /></pre>Estes passos deverão ser os necessários para proceder à instalação da actual versão do skype para debian 7.0 já suportando o "multiarch"  </div>
+

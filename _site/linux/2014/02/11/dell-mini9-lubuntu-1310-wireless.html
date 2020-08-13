@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+	<div id="header">	
+        	<title>instalação de driver wireless DELL mini9</title>
+	        <meta name="viewport" content="width=device-width">
+	</div>
+	<div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
+            <a class="extra" href="/">Blog</a>
+            <a class="extra" href="/sobre/">Sobre</a>
+        </div>
+    </head>
+    <body>
+
+        
+          <p>A instalação do Lubuntu 13.10 no netbook DELL mini 9, decorreu sem sobressaltos, excepto no caso dos drivers para wireless, em que é necessário efectuar o download e instalação do firware da placa em causa</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">lspci</span> <span class="o">|</span> <span class="n">grep</span> <span class="no">Network</span></code></pre></figure>
+
+<p>resultado: </p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mo">03</span><span class="p">:</span><span class="mo">00</span><span class="o">.</span><span class="mi">0</span> <span class="no">Network</span> <span class="ss">controller</span><span class="p">:</span> <span class="no">Broadcom</span> <span class="no">Corporation</span> <span class="no">BCM4312</span> <span class="mi">802</span><span class="o">.</span><span class="mi">11</span><span class="n">b</span><span class="o">/</span><span class="n">g</span> <span class="no">LP</span><span class="o">-</span><span class="no">PHY</span> <span class="p">(</span><span class="n">rev</span> <span class="mo">01</span><span class="p">)</span></code></pre></figure>
+
+<p>remover bcmwl-kernel-source</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">remove</span> <span class="n">bcmwl</span><span class="o">-</span><span class="n">kernel</span><span class="o">-</span><span class="n">source</span></code></pre></figure>
+
+<p>instalar b43-fwcutter b43-sta-dkms firmware-b43-installer</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">b43</span><span class="o">-</span><span class="n">fwcutter</span> <span class="n">b43</span><span class="o">-</span><span class="n">sta</span><span class="o">-</span><span class="n">dkms</span> <span class="n">firmware</span><span class="o">-</span><span class="n">b43</span><span class="o">-</span><span class="n">installer</span></code></pre></figure>
+
+<p>na directoria /etc/modprobe.d</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">cd</span> <span class="sr">/etc/mo</span><span class="n">dprobe</span><span class="o">.</span><span class="n">d</span></code></pre></figure>
+
+<p>editar ficheiro broadcom-sta-dkms.conf comentar a linha:</p>
+
+<p>&quot; blacklist b43&quot;</p>
+
+<p>Deverá reiniciar o computador e se tudo correr bem ficará a funcionar o wireless.</p>
+
+<p>Nota: apesar de este modelo estar equipado com um modem GSM, ainda não tive oportunidade de testar...</p>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                paulocruz.com.pt<br />
+              </p>
+            </div>
+	    <div class="contact">
+              <p>
+                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+    </body>
+</html>

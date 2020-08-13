@@ -1,0 +1,10 @@
+---
+layout: post
+title: Configuração Hylafax em Ubuntu server 10.04LTS
+date: 2012-02-27
+comments: false
+---
+
+<div class='post'>
+Após a configuração do hylafax no ubuntu server 10.04LTS, poderá acontecer que o ficheiro seja sempre enviado em branco.<br />Para  corrigir este problema deve-se editar o ficheiro  /var/spool/hylafax/bin/pdf2fax.gs e acrescentar à string do comando para  conversão o seguinte parametro -dMaxStripSize=0 \<br />exemplo:<br />$PS -q \<br />&nbsp;&nbsp;&nbsp; -sDEVICE=$device \<br />&nbsp;&nbsp;&nbsp; -dNOPAUSE \<br />&nbsp;&nbsp;&nbsp; -dSAFER=true \<br />&nbsp;&nbsp;&nbsp; -dMaxStripSize=0 \<br />&nbsp;&nbsp;&nbsp; -sPAPERSIZE=$paper \<br />&nbsp;&nbsp;&nbsp; $FIXEDWIDTH \<br />&nbsp;&nbsp;&nbsp; -dBATCH \<br />&nbsp;&nbsp;&nbsp; -r$hres\x$vres \<br />&nbsp;&nbsp;&nbsp; "-sOutputFile=$out" \<br />&nbsp;&nbsp;&nbsp; $fil</div>
+

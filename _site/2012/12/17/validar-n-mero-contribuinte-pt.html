@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+	<div id="header">	
+        	<title>Validar número contribuinte PT</title>
+	        <meta name="viewport" content="width=device-width">
+	</div>
+	<div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
+            <a class="extra" href="/">Blog</a>
+            <a class="extra" href="/sobre/">Sobre</a>
+        </div>
+    </head>
+    <body>
+
+        
+          <h2>Validar número contribuinte PT</h2>
+<p class="meta">17 Dec 2012</p>
+
+<div class="post">
+<div class='post'>
+Como necessitei de criar um utilitário para a validação do numero de contribuinte, coloco aqui a função que criei em PHP para esse fim.<br /><br /><br /><div style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="font-size: small;"><br /></span></div><span style="font-family: &quot;Courier New&quot;,Courier,monospace; font-size: small;">&lt;?php<br />&nbsp;&nbsp;&nbsp; /**<br />&nbsp;&nbsp;&nbsp; &nbsp; * Função que valida se a estrutura do numero de contribuinte português é válida<br />&nbsp;&nbsp;&nbsp; &nbsp; * <br />&nbsp;&nbsp;&nbsp; &nbsp; * @todo validar se caracteres são todos digitos...<br />&nbsp;&nbsp;&nbsp; &nbsp; * <br />&nbsp;&nbsp;&nbsp; &nbsp; * Devolve os valores:<br />&nbsp;&nbsp;&nbsp; &nbsp; * - 0 se o numero é válido<br />&nbsp;&nbsp;&nbsp; &nbsp; * - 1 se o numero é inválido<br />&nbsp;&nbsp;&nbsp; &nbsp; * - 2 se o numero tem comprimento errado<br />&nbsp;&nbsp;&nbsp; &nbsp; * <br />&nbsp;&nbsp;&nbsp; &nbsp; * <br />&nbsp;&nbsp;&nbsp; &nbsp; */<br />&nbsp;&nbsp;&nbsp; function calcularNif($string_nif){<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if(strlen($string_nif)==9){<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $nif_temp=str_split($string_nif);<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $soma_controlo=0;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $digito_controlo_calculado=0;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; for($indice=0;$indice&lt;8;$indice++){<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $soma_controlo+=$nif_temp[$indice]*($indice+2);<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $calculo_parcial=intval($soma_controlo/11);<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $calculo_parcial2=11*$calculo_parcial;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $digito_controlo_calculado=$soma_controlo-$calculo_parcial2;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if($digito_controlo_calculado==10)<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $digito_controlo_calculado=0;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if($digito_controlo_calculado==$nif_temp[8])<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return 0; //Devolve 0 se o numero é válido <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; else<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return 1; //Devolve 1 se o numero é inválido<br /><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return 2; // Devolve 2 se numero com comprimento invalido<br />&nbsp;&nbsp;&nbsp; }<br /><br />?&gt;</span><br /><br /><span style="font-family: inherit;"><b>Nota:</b> Como</span> é óbvio deverão usar o código à vossa responsabilidade e deverão validar a sua correcção.<br />Não terei nem aceito qualquer responsabilidade sobre o seu uso e eventuais prejuízos pela sua utilização.<br /><br /><blockquote></blockquote></div>
+
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                paulocruz.com.pt<br />
+              </p>
+            </div>
+	    <div class="contact">
+              <p>
+                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+    </body>
+</html>

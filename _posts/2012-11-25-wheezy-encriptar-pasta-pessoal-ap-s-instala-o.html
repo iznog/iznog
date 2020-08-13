@@ -1,0 +1,10 @@
+---
+layout: post
+title: Wheezy - Encriptar pasta pessoal após instalação
+date: 2012-11-25
+comments: false
+---
+
+<div class='post'>
+<br /><br />Para encriptar a pasta pessoal após instalação, no debian wheezy efectuar os seguintes passos:<br /><br />Sair do utilizador do qual se pretende encriptar a pasta pessoal<br /><br />Fazer o login como root, por exemplo depois de mudar para uma consola CTRL+F2 e depois instalar o pacote ecryptfs-utils<br /><br /><pre>apt-get install ecryptfs-utils</pre><br />carregar o modulo<br /><br /><pre>modprobe ecryptfs</pre><br />efectuar a encriptação:<br /><br /><pre>ecryptfs-migrate-home -u paulo</pre><br />Vai pedir a palavra passe do utilizador<br /><br />Após a encriptação dos dados, seguir os passos indicados, nomeadamente entrar com o utilizador que se efectuou a encriptação da pasta antes de fazer o reboot do computador e verificar se se mantêm acesso a todos os dados.<br />Efectuar numa consola o comando <br /><br /><pre>ecryptfs-unwrap-passphrase</pre><br />e registar a chave fornecida em lugar seguro e fora dos olhares alheios :)<br />Se tudo estiver bem eliminar a pasta indicada normalmente: &lt;utilizador&gt;.&lt;stringaleatoria&gt;<br /><br /><br /><br /><br /><br /></div>
+

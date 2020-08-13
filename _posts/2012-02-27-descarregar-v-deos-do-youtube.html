@@ -1,0 +1,10 @@
+---
+layout: post
+title: Descarregar vídeos do youtube
+date: 2012-02-27
+comments: false
+---
+
+<div class='post'>
+Para guardar localmente um vídeo do youtube para visualizar mais  tarde offline, existem várias soluções, mas aquela que uso com mais  regularidade, é o youtube-dl.<br />Como uso Linux, normalmente uma  variante do ubuntu ou o próprio (ou pelo menos é o que tenho instalado e  vou usar como referência o xubuntu 11.04 ), para instalar basta fazer:<br /><pre>sudo apt-get install youtube-dl</pre>Para ver quais as opções e a forma de utilizar podemos fazer <br /><pre>man youtube-dl.</pre>Mas rapidamente basta usar o comando youtube-dl seguido do url do vídeo.<br />Uma nota para os mais distraídos... o URL do vídeo é o endereço que aparece na barra de endereços do browser.<br />Ao  efectuar download se obtiverem um erro "ERROR: no fmt_url_map or conn  information found in video info", façam uma actualização do youtube-dl  com o comando:<br /><pre>sudo youtube-dl --update</pre>Esta última obtive na discussão sobre o erro no github para o projecto youtube-dl <a data-mce-href="https://github.com/rg3/youtube-dl/issues/108" href="https://github.com/rg3/youtube-dl/issues/108" target="_blank" title="Error &quot;no fmt_url_map or conn information found in video info&quot; with specific video">aqui</a>.</div>
+

@@ -1,0 +1,10 @@
+---
+layout: post
+title: R commander em xubuntu 12.04 - mudar a lingua
+date: 2012-10-26
+comments: false
+---
+
+<div class='post'>
+Ao instalar o R e o package Rcmdr a lingua por defeito será a portuguesa (aparentemente português brasileiro).<br /><br />Caso se pretenda mudar a língua, por exemplo, para inglês, podemos seguir os seguintes passos:<br /><br />Na pasta /usr/share/applications, encontramos um ficheiro Rcmdr.desktop, o qual tem as definições da opção presente no menu das aplicações.<br />O que teremos que fazer é acrescentar na definição da execução, a definição da variavel LANGUAGE para a lingua que pretendemos.<br /><br />Assim os passos serão (usando uma shell):<br /><br /><pre>sudo vim /usr/share/applications/Rcmdr.desktop<br /></pre><br />A linha:<br /><pre>Exec=sh -c 'R_DEFAULT_PACKAGES="$R_DEFAULT_PACKAGES Rcmdr" R "$@" '<br /></pre><br />Mudamos para:<br /><pre>Exec=sh -c 'LANGUAGE="en" R_DEFAULT_PACKAGES="$R_DEFAULT_PACKAGES Rcmdr" R "$@" '<br /></pre><br />Guardamos o ficheiro e será iniciado o Rcmdr com os menus e formularios na língua seleccionada.<br /><br />Neste caso mudamos a lingua para inglês, por exemplo para Alemão podemos mudar para "de".<br /><br /></div>
+

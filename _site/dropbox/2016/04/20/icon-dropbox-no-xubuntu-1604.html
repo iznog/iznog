@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+	<div id="header">	
+        	<title>Workaround para aparecer icon do Dropbox no Xubuntu 16.04</title>
+	        <meta name="viewport" content="width=device-width">
+	</div>
+	<div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
+            <a class="extra" href="/">Blog</a>
+            <a class="extra" href="/sobre/">Sobre</a>
+        </div>
+    </head>
+    <body>
+
+        
+          <h1>Workaround para aparecer icon do Dropbox no Xubuntu 16.04</h1>
+
+<p>Sendo utilizador de xubuntu, normalmente nas versões LTS e nomeadamente da versão 16.04 e também utilizador do Dropbox para alguns tipos de conteudos, deparei-me com o problema do icon de notificação do Dropbox, não aparecer correctamente.</p>
+
+<p>Após alguma pesquisa encontrei no AskUbuntu este post <a href="http:askubuntu.com">http://askubuntu.com</a>.</p>
+
+<p>Resumindo o que resultou no meu caso foi copiar o atalho dropbox.desktop existente na pasta ~/.config/autostart/, por exemplo para dropbox_hack.desktop e efectuar as seguintes alterações como sugerido por um dos utilizadores que comentou no post que referi anteriormente:</p>
+
+<p>Criar uma directoria na pasta do utilizador com  o nome &quot;bin&quot; :</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~
+mkdir bin</code></pre></figure>
+
+<p>criar um script com o nome dropbox_hack.sh com o seguinte conteudo:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Pára alguma instância do dropbox que esteja a correr</span>
+dropbox stop
+
+<span class="c1"># inicia novamente o Dropbox</span>
+dbus-launch dropbox start -i</code></pre></figure>
+
+<p>e de seguida definimos o script como executável</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">chmod +x ~/bin/dropbox_hack.sh</code></pre></figure>
+
+<p>Editamos o atalho da aplicação do dropbox criado de forma a que a linha Exec= contenha o caminho para o ficheiro criado anteriormente, no exemplo seria /home/<nomeutilizador>/bin/dropbox_hack.sh</p>
+
+<p>O atalho original do dropbox deve ser removido do arranque, por exemplo, eliminando o ficheiro original em &quot;~/.config/autostart/&quot; com o nome &quot;dropbox.desktop&quot;</p>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                paulocruz.com.pt<br />
+              </p>
+            </div>
+	    <div class="contact">
+              <p>
+                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+    </body>
+</html>

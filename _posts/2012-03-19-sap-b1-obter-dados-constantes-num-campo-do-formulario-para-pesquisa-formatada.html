@@ -1,0 +1,10 @@
+---
+layout: post
+title: SAP B1 - Obter dados constantes num campo do formulario para pesquisa formatada
+date: 2012-03-19
+comments: false
+---
+
+<div class='post'>
+Para obter os dados constantes num campo do formulário (por exemplo o formulário das transferência de inventário), usa-se:<br><br><pre>SELECT $[$24.U_XX_NEnc.0];</pre><br>Ao activar a opção "informação de sistema" no menu "Visão", conseguimos ver alguns dos dados que necessitamos a formula acima.<br><br><div>No caso de uma grid:<br>Então $24, é o valor obtido em "Item", o "U_XX_NEnc" é a coluna.<div><br></div><div>No caso de o campo não pertencer a uma grid, o valor "U_XX_NEnc" será obtido do valor de "variable".<br><br>Assim poderemos usar por exemplo para numa pesquisa formatada obter dados de tabelas não acessiveis directamente no formulario, baseado/filtrado nos dados obtidos pela fórmula indicada.<br><br><br></div></div></div>
+

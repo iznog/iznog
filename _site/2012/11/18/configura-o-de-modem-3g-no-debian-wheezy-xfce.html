@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+	<div id="header">	
+        	<title>Configuração de modem 3g no Debian Wheezy XFCE</title>
+	        <meta name="viewport" content="width=device-width">
+	</div>
+	<div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
+            <a class="extra" href="/">Blog</a>
+            <a class="extra" href="/sobre/">Sobre</a>
+        </div>
+    </head>
+    <body>
+
+        
+          <h2>Configuração de modem 3g no Debian Wheezy XFCE</h2>
+<p class="meta">18 Nov 2012</p>
+
+<div class="post">
+<div class='post'>
+Na instalação por defeito do debian Wheezy, o meu modem 3G ZTE MF636 da TMN não funciona com o Network manager.<br /><br />Assim inicialmente instalei o wvdial e o usb-modeswitch e configurei o wvdial.conf para poder iniciar manualmente a ligação.<br /><br />No entanto algumas aplicações usam o DBUS para detectar a existência de uma ligação de rede para poderem tentar a ligação, sendo uma dessas aplicações, o pidgin.<br /><br />Assim e para tentar ultrapassar essa questão &nbsp;e facilitar a ligação, procurei informação como poderia fazer com que o network manager instalado por defeito pudesse detectar o modem 3G e efectuar a ligação através do mesmo.<br />Foi este <a href="http://cumanadigital.blogspot.pt/2011/06/configurar-modem-3g-usb-movilnet.html" target="_blank">artigo</a>&nbsp;que me ajudou a terminar a configuração.<br /><br />Assim instalei os pacotes modemmanager e gnome-ppp que me faltavam:<br /><br /><pre>apt-get install modemmanager gnome-ppp<br /></pre><br />Configurei no network manager a ligação:<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="/assets/nm-tmn.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="303" src="/assets/nm-tmn.png" width="320" /></a></div><br /><br />Ficou a funcionar correctamente, facilitando o estabelecimento da ligação 3G.<br /><br /><br /><br /></div>
+
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                paulocruz.com.pt<br />
+              </p>
+            </div>
+	    <div class="contact">
+              <p>
+                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+    </body>
+</html>
