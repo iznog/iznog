@@ -1,15 +1,1 @@
-name: www.paulocruz.com.pt
-markdown: redcarpet
-highlighter: pygments
-
-ftp_host: 'paulocruz.com.pt'
-ftp_dir: '/public/www'
-ftp_passive: false
-
-# optional
-ftp_port: 21                  # default 21
-ftp_username: 'paulocruz'     # default read from stdin
-ftp_password: 'YAml0w1v5_' # default read from stdin
-
-
-
+theme: jekyll-theme-hacker
