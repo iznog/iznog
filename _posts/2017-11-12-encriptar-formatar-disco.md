@@ -4,8 +4,6 @@ title: Encriptar e formatar discos em linux
 date: 2017-11-12
 categories: linux
 ---
-# Encriptar e formatar discos em linux
-
 ## Passos para encriptar discos em Linux (neste caso testado em xubuntu 16.04)
 
 Limpar disco

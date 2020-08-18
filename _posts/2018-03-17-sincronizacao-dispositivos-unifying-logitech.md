@@ -4,9 +4,6 @@ title: Sincronizacao de dispositivos logitech unifying em Linux
 date: 2018-03-17
 categories: hardware logitech
 ---
-
-# Sincronização de dispositivos logitech unifying em Linux
-
 A tecnologia unifying da Logitech, permite que com o mesmo receptor usb, se possam ligar até 6 dispositivos, desde que suportem esta tecnologia.
 
 Para que se possa associar (ou emparelhar) um dispositivo com um determinado receptor, é necessário usar o software "Unifying Software" da Logitech, que disponibiliza o mesmo para Windows, Apple OSX e ChromeOS, não sendo o linux suportado pela marca.

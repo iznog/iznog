@@ -5,7 +5,6 @@ date: 2014-02-12
 author: Paulo Cruz
 categories: ubuntu
 ---
-
 O [Teamviewer](http://www.teamviewer.com) é um software de assistência remota útil quando precisar de ajudar um(a) amigo(a) ou precisar de ajuda. A sua utilização individual é gratuita (o que não se aplica para uso profissional).
 
 Uma das vantagens, é que o mesmo funciona, tanto em Windows, como OSX ou Linux.

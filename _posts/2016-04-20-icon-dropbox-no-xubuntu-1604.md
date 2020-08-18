@@ -4,9 +4,6 @@ title: Workaround para aparecer icon do Dropbox no Xubuntu 16.04
 date: 2016-04-20
 categories: dropbox
 ---
-# Workaround para aparecer icon do Dropbox no Xubuntu 16.04
-
-
 Sendo utilizador de xubuntu, normalmente nas versões LTS e nomeadamente da versão 16.04 e também utilizador do Dropbox para alguns tipos de conteudos, deparei-me com o problema do icon de notificação do Dropbox, não aparecer correctamente.
 
 Após alguma pesquisa encontrei no AskUbuntu este post [http://askubuntu.com] (http:askubuntu.com).
