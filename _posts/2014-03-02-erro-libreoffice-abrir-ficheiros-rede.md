@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: Libreoffice erro abrir ficheiros rede no KDE
+date: 2014-03-02
 categories: libreoffice
 ---
 # Libreoffice - erro a abrir ficheiros de rede no KDE

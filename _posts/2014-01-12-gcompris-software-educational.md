@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: GCompris - software educacional open source
+date: 2014-01-12
 categories: gcompris software
 ---
 O [Gcompris](http://www.gcompris.net) é um software composto por uma conjunto alargado de jogos didácticos para idades entre os 2 e os 10 anos.

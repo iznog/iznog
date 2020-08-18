@@ -1,52 +1,65 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+<html lang="en-US">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-	<div id="header">	
-        	<title>Configuracao de hora em telefone cisco e mudança de hora automatica</title>
-	        <meta name="viewport" content="width=device-width">
-	</div>
-	<div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
-            <a class="extra" href="/">Blog</a>
-            <a class="extra" href="/sobre/">Sobre</a>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Configuracao de hora em telefone cisco e mudança de hora automatica | Notas do Paulo</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Configuracao de hora em telefone cisco e mudança de hora automatica" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Artigo aplicável aos telefones CISCO seguintes:SPA 502GSPA 504GSPA 525GPara que os telefones tenham sempre a hora sincronizada e mudem para a hora de verão, as seguintes configurações são necessárias:Activar o menu Admin-&gt;advanced.Grupo System:Primary NTP : endereço de servidor de NTPGrupo Regional:Time Zone: GMTDaylight Saving Time Rule: start=3/-1/7;end=10/-1/7;save=1Daylight Saving Time Enable:&nbsp; yesAo submeter as alterações na configuração, a data/hora já ficará devidamente ajustada.A definição da regra para a hora de verão é feita da forma seguinte (do manual do telefone):&quot;The phone supports auto adjustment for daylight saving time. You must set Daylight Savings Time Enable to yesand enter the DST rule. This option affects the time stamp onCallerID .To enter the rule for calculating DST, include the start, end, and save valuesseparated by semi-colons (;) as follows:Start = start-time;end=end-time; save =save-timeFor example, the default DST rule isstart=4/1/7;end=10/-1/7;save=1.The start-time and end-time values specify the start and end dates and times ofdaylight saving time. Each value is in this format:month/day/ weekday[/HH:mm:ss]The month value equals any value in the range 1-12 (January-December).The day value equals any + or - value in the range 1-31. If day is 1, it means theweekday on or before the end of the month (in other words the last occurrence ofweekday in that month).The weekday value equals any value in the range 1-7 (Monday-Sunday). It can also equal 0. If the weekday value is 0, this means that the date to start or end daylightsaving is exactly the date given. In that case, the day value must not be negative. Ifthe weekday value is not 0 and the day value is positive, then daylight saving startsor ends on the weekday value on or after the date given. If the weekday value isnot 0 and the day value is negative, then daylight saving starts or ends on theweekday value on or before the date given.Optional time values:HH represents hours (0-23), mm represents minutes (0-59).and ss represents seconds (0-59). Optional values inside brackets [ ] are assumedto be 0 if not specified. Midnight is represented by 0:0:0 of the given date.The save-time value is the number of hours, minutes, and/or seconds to add to thecurrent time during DST. The save-time value can be preceded by a plus (+) orminus (-) sign to indicate addition or subtraction.&quot;Agora aplicando as regras definidas para a hora de verão para Portugal, temos a regra:start=3/-1/7;end=10/-1/7;save=1" />
+<meta property="og:description" content="Artigo aplicável aos telefones CISCO seguintes:SPA 502GSPA 504GSPA 525GPara que os telefones tenham sempre a hora sincronizada e mudem para a hora de verão, as seguintes configurações são necessárias:Activar o menu Admin-&gt;advanced.Grupo System:Primary NTP : endereço de servidor de NTPGrupo Regional:Time Zone: GMTDaylight Saving Time Rule: start=3/-1/7;end=10/-1/7;save=1Daylight Saving Time Enable:&nbsp; yesAo submeter as alterações na configuração, a data/hora já ficará devidamente ajustada.A definição da regra para a hora de verão é feita da forma seguinte (do manual do telefone):&quot;The phone supports auto adjustment for daylight saving time. You must set Daylight Savings Time Enable to yesand enter the DST rule. This option affects the time stamp onCallerID .To enter the rule for calculating DST, include the start, end, and save valuesseparated by semi-colons (;) as follows:Start = start-time;end=end-time; save =save-timeFor example, the default DST rule isstart=4/1/7;end=10/-1/7;save=1.The start-time and end-time values specify the start and end dates and times ofdaylight saving time. Each value is in this format:month/day/ weekday[/HH:mm:ss]The month value equals any value in the range 1-12 (January-December).The day value equals any + or - value in the range 1-31. If day is 1, it means theweekday on or before the end of the month (in other words the last occurrence ofweekday in that month).The weekday value equals any value in the range 1-7 (Monday-Sunday). It can also equal 0. If the weekday value is 0, this means that the date to start or end daylightsaving is exactly the date given. In that case, the day value must not be negative. Ifthe weekday value is not 0 and the day value is positive, then daylight saving startsor ends on the weekday value on or after the date given. If the weekday value isnot 0 and the day value is negative, then daylight saving starts or ends on theweekday value on or before the date given.Optional time values:HH represents hours (0-23), mm represents minutes (0-59).and ss represents seconds (0-59). Optional values inside brackets [ ] are assumedto be 0 if not specified. Midnight is represented by 0:0:0 of the given date.The save-time value is the number of hours, minutes, and/or seconds to add to thecurrent time during DST. The save-time value can be preceded by a plus (+) orminus (-) sign to indicate addition or subtraction.&quot;Agora aplicando as regras definidas para a hora de verão para Portugal, temos a regra:start=3/-1/7;end=10/-1/7;save=1" />
+<link rel="canonical" href="http://localhost:4000/2012/03/28/configuracao-de-hora-em-telefone-cisco-e-mudan-a-de-hora-automatica.html" />
+<meta property="og:url" content="http://localhost:4000/2012/03/28/configuracao-de-hora-em-telefone-cisco-e-mudan-a-de-hora-automatica.html" />
+<meta property="og:site_name" content="Notas do Paulo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-03-28T00:00:00+01:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2012/03/28/configuracao-de-hora-em-telefone-cisco-e-mudan-a-de-hora-automatica.html","headline":"Configuracao de hora em telefone cisco e mudança de hora automatica","dateModified":"2012-03-28T00:00:00+01:00","datePublished":"2012-03-28T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2012/03/28/configuracao-de-hora-em-telefone-cisco-e-mudan-a-de-hora-automatica.html"},"description":"Artigo aplicável aos telefones CISCO seguintes:SPA 502GSPA 504GSPA 525GPara que os telefones tenham sempre a hora sincronizada e mudem para a hora de verão, as seguintes configurações são necessárias:Activar o menu Admin-&gt;advanced.Grupo System:Primary NTP : endereço de servidor de NTPGrupo Regional:Time Zone: GMTDaylight Saving Time Rule: start=3/-1/7;end=10/-1/7;save=1Daylight Saving Time Enable:&nbsp; yesAo submeter as alterações na configuração, a data/hora já ficará devidamente ajustada.A definição da regra para a hora de verão é feita da forma seguinte (do manual do telefone):&quot;The phone supports auto adjustment for daylight saving time. You must set Daylight Savings Time Enable to yesand enter the DST rule. This option affects the time stamp onCallerID .To enter the rule for calculating DST, include the start, end, and save valuesseparated by semi-colons (;) as follows:Start = start-time;end=end-time; save =save-timeFor example, the default DST rule isstart=4/1/7;end=10/-1/7;save=1.The start-time and end-time values specify the start and end dates and times ofdaylight saving time. Each value is in this format:month/day/ weekday[/HH:mm:ss]The month value equals any value in the range 1-12 (January-December).The day value equals any + or - value in the range 1-31. If day is 1, it means theweekday on or before the end of the month (in other words the last occurrence ofweekday in that month).The weekday value equals any value in the range 1-7 (Monday-Sunday). It can also equal 0. If the weekday value is 0, this means that the date to start or end daylightsaving is exactly the date given. In that case, the day value must not be negative. Ifthe weekday value is not 0 and the day value is positive, then daylight saving startsor ends on the weekday value on or after the date given. If the weekday value isnot 0 and the day value is negative, then daylight saving starts or ends on theweekday value on or before the date given.Optional time values:HH represents hours (0-23), mm represents minutes (0-59).and ss represents seconds (0-59). Optional values inside brackets [ ] are assumedto be 0 if not specified. Midnight is represented by 0:0:0 of the given date.The save-time value is the number of hours, minutes, and/or seconds to add to thecurrent time during DST. The save-time value can be preceded by a plus (+) orminus (-) sign to indicate addition or subtraction.&quot;Agora aplicando as regras definidas para a hora de verão para Portugal, temos a regra:start=3/-1/7;end=10/-1/7;save=1","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a id="a-title" href="/">
+                <h1>Notas do Paulo</h1>
+            </a>
+            <h2>Notas sobre diversos temas, normalmente relacionados com tecnologia</h2>
+
+            <a href="/">Blog</a>
+            <a href="/sobre/">Sobre</a>
         </div>
-    </head>
-    <body>
+    </header>
 
-        
-          <h2>Configuracao de hora em telefone cisco e mudança de hora automatica</h2>
-<p class="meta">28 Mar 2012</p>
+    <div class="container">
+        <section id="main_content">
+            <small>28 March 2012</small>
+<h1>Configuracao de hora em telefone cisco e mudança de hora automatica</h1>
 
-<div class="post">
 <div class='post'>
 Artigo aplicável aos telefones CISCO seguintes:<br /><ul><li>SPA 502G</li><li>SPA 504G</li><li>SPA 525G</li></ul><br />Para que os telefones tenham sempre a hora sincronizada e mudem para a hora de verão, as seguintes configurações são necessárias:<br /><br />Activar o menu Admin-&gt;advanced.<br /><br />Grupo System:<br /><ul><li>Primary NTP : endereço de servidor de NTP</li></ul>Grupo Regional:<br /><ul><li>Time Zone: GMT</li><li>Daylight Saving Time Rule: start=3/-1/7;end=10/-1/7;save=1</li><li>Daylight Saving Time Enable:&nbsp; yes</li></ul><br />Ao submeter as alterações na configuração, a data/hora já ficará devidamente ajustada.<br /><br />A definição da regra para a hora de verão é feita da forma seguinte (do manual do telefone):<br /><br /><pre>"The phone supports auto adjustment for daylight saving time. You must set Daylight Savings Time Enable to yes<br />and enter the DST rule. This option affects the time stamp on<br />CallerID .To enter the rule for calculating DST, include the start, end, and save valuesseparated by semi-colons (;) as follows:<br />Start = start-time;end=end-time; save =save-time<br /><br />For example, the default DST rule is<br /><br />start=4/1/7;end=10/-1/7;save=1.<br />The start-time and   end-time values specify the start and end dates and times ofdaylight saving time. Each value is in this format:<br /><br />month/day/ weekday[/HH:mm:ss]<br /><br />The month value equals any value in the range 1-12 (January-December).The day value equals any + or - value in the range 1-31. If day is 1, it means theweekday on or before the end of the month (in other words the last occurrence ofweekday in that month).The weekday value equals any value in the range 1-7 (Monday-Sunday). It can also equal 0. If the weekday value is 0, this means that the date to start or end daylightsaving is exactly the date given. In that case, the day value must not be negative. Ifthe weekday value is not 0 and the day value is positive, then daylight saving startsor ends on the weekday value on or after the date given. If the weekday value isnot 0 and the day value is negative, then daylight saving starts or ends on theweekday value on or before the date given.<br /><br />Optional time values:<br />HH represents hours (0-23), mm represents minutes (0-59).and ss represents seconds (0-59). Optional values inside brackets [ ] are assumedto be 0 if not specified. Midnight is represented by 0:0:0 of the given date.The save-time value is the number of hours, minutes, and/or seconds to add to thecurrent time during DST. The save-time value can be preceded by a plus (+) orminus (-) sign to indicate addition or subtraction."</pre><br />Agora aplicando as regras definidas para a hora de verão para Portugal, temos a regra:<br /><br /><pre>start=3/-1/7;end=10/-1/7;save=1</pre><br /></div>
 
 
-</div>
 
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                paulocruz.com.pt<br />
-              </p>
-            </div>
-	    <div class="contact">
-              <p>
-                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
-              </p>
-            </div>
+  <small>tags: <button></button></small>
 
-          </div>
+        </section>
+    </div>
+    <div class="footer">
+        <div class="contact">
+            paulocruz.com.pt<br />
         </div>
+    </div>
 
-    </body>
+    
+</body>
+
 </html>

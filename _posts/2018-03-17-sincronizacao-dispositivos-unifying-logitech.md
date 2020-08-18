@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: Sincronizacao de dispositivos logitech unifying em Linux
+date: 2018-03-17
 categories: hardware logitech
 ---
 

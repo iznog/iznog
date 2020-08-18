@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: Upgrade de Kubuntu 13.10 para Kubuntu 14.04
+date: 2014-04-21
 categories: Kubuntu
 ---
 # Upgrade de Kubuntu 13.10 para Kubuntu 14.04

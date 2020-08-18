@@ -1,57 +1,77 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+<html lang="en-US">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-	<div id="header">	
-        	<title>Libreoffice erro abrir ficheiros rede no KDE</title>
-	        <meta name="viewport" content="width=device-width">
-	</div>
-	<div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
-            <a class="extra" href="/">Blog</a>
-            <a class="extra" href="/sobre/">Sobre</a>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Libreoffice erro abrir ficheiros rede no KDE | Notas do Paulo</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Libreoffice erro abrir ficheiros rede no KDE" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Libreoffice - erro a abrir ficheiros de rede no KDE" />
+<meta property="og:description" content="Libreoffice - erro a abrir ficheiros de rede no KDE" />
+<link rel="canonical" href="http://localhost:4000/libreoffice/2014/03/02/erro-libreoffice-abrir-ficheiros-rede.html" />
+<meta property="og:url" content="http://localhost:4000/libreoffice/2014/03/02/erro-libreoffice-abrir-ficheiros-rede.html" />
+<meta property="og:site_name" content="Notas do Paulo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-03-02T00:00:00+00:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/libreoffice/2014/03/02/erro-libreoffice-abrir-ficheiros-rede.html","headline":"Libreoffice erro abrir ficheiros rede no KDE","dateModified":"2014-03-02T00:00:00+00:00","datePublished":"2014-03-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/libreoffice/2014/03/02/erro-libreoffice-abrir-ficheiros-rede.html"},"description":"Libreoffice - erro a abrir ficheiros de rede no KDE","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a id="a-title" href="/">
+                <h1>Notas do Paulo</h1>
+            </a>
+            <h2>Notas sobre diversos temas, normalmente relacionados com tecnologia</h2>
+
+            <a href="/">Blog</a>
+            <a href="/sobre/">Sobre</a>
         </div>
-    </head>
-    <body>
+    </header>
 
-        
-          <h1>Libreoffice - erro a abrir ficheiros de rede no KDE</h1>
+    <div class="container">
+        <section id="main_content">
+            <small>2 March 2014</small>
+<h1>Libreoffice erro abrir ficheiros rede no KDE</h1>
+
+<h1 id="libreoffice---erro-a-abrir-ficheiros-de-rede-no-kde">Libreoffice - erro a abrir ficheiros de rede no KDE</h1>
 
 <p>Se ao tentar abrir ficheiros com o libreoffice no KDE de um recurso da rede, nada acontece, pode dever-se a um bug existente e reportado <a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=67527">aqui</a>, sendo que já referi o mesmo no meu <a href="/2013/11/19/libreoffice-4-1-do-ppa-de-libreoffice-org-erro-abrir-ficheiro-de-partilha-samba.html">post</a>.</p>
 
-<p>Para corrigir o problema, enquanto o problema não é corrigido em alguma actualização, devemos nos atalhos do libreoffice localizados em /usr/share/applications, comentar a linha &quot;X-KDE-Protocols=file,http,smb,ftp,webdav&quot;.</p>
+<p>Para corrigir o problema, enquanto o problema não é corrigido em alguma actualização, devemos nos atalhos do libreoffice localizados em /usr/share/applications, comentar a linha “X-KDE-Protocols=file,http,smb,ftp,webdav”.</p>
 
 <p>Aproveitando a sugestão colocada no comentário #47 ao report do bug referenciado acima, podemos fazer o seguinte:</p>
 
 <ul>
-<li>abrir um terminal, no kde podemos usar o konsole</li>
-<li>executar o seguinte:</li>
+  <li>abrir um terminal, no kde podemos usar o konsole</li>
+  <li>executar o seguinte:</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s/X-KDE-Protocols=file,http,smb,ftp,webdav/#X-KDE-Protocols=file,http,smb,ftp,webdav/&#39;</span> <span class="sr">/usr/s</span><span class="n">hare</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="n">libreoffice</span><span class="o">-*</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">'s/X-KDE-Protocols=file,http,smb,ftp,webdav/#X-KDE-Protocols=file,http,smb,ftp,webdav/'</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="n">libreoffice</span><span class="o">-*</span></code></pre></figure>
 
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                paulocruz.com.pt<br />
-              </p>
-            </div>
-	    <div class="contact">
-              <p>
-                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
-              </p>
-            </div>
 
-          </div>
+
+  <small>tags: <button></button></small>
+
+        </section>
+    </div>
+    <div class="footer">
+        <div class="contact">
+            paulocruz.com.pt<br />
         </div>
+    </div>
 
-    </body>
+    
+</body>
+
 </html>

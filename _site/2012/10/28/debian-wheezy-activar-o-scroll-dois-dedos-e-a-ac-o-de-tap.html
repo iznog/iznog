@@ -1,52 +1,65 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+<html lang="en-US">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-	<div id="header">	
-        	<title>debian wheezy - activar o scroll dois dedos e a acção de tap</title>
-	        <meta name="viewport" content="width=device-width">
-	</div>
-	<div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
-            <a class="extra" href="/">Blog</a>
-            <a class="extra" href="/sobre/">Sobre</a>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>debian wheezy - activar o scroll dois dedos e a acção de tap | Notas do Paulo</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="debian wheezy - activar o scroll dois dedos e a acção de tap" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ao instalar o wheezy no meu portatil, deixei de poder usar os dois dedos para fazer o scroll e o tap (simulação do click com o botão direito).Depois de alguma pesquisa encontrei este artigo nos forums de utilizadores Debian.Então o que fiz foi criar o ficheiro 42-synaptics.conf na directoria /etc/X11/xorg.conf.d/e coloquei o seguinte conteudo:Section &quot;InputClass&quot; Identifier &quot;touchpad tweaked catchall&quot; MatchIsTouchpad &quot;on&quot; Driver &quot;synaptics&quot; Option &quot;TapButton1&quot; &quot;1&quot; Option &quot;TapButton2&quot; &quot;3&quot; Option &quot;TapButton3&quot; &quot;2&quot; Option &quot;SpecialScrollAreaRight&quot; &quot;false&quot; Option &quot;VertEdgeScroll&quot; &quot;false&quot; Option &quot;VertTwoFingerScroll&quot; &quot;true&quot; Option &quot;RTCornerButton&quot; &quot;3&quot; Option &quot;RBCornerButton&quot; &quot;3&quot; Option &quot;LTCornerButton&quot; &quot;2&quot; Option &quot;LBCornerButton&quot; &quot;2&quot;EndSectionApós reiniciar o S.O. ficou a funcionar." />
+<meta property="og:description" content="Ao instalar o wheezy no meu portatil, deixei de poder usar os dois dedos para fazer o scroll e o tap (simulação do click com o botão direito).Depois de alguma pesquisa encontrei este artigo nos forums de utilizadores Debian.Então o que fiz foi criar o ficheiro 42-synaptics.conf na directoria /etc/X11/xorg.conf.d/e coloquei o seguinte conteudo:Section &quot;InputClass&quot; Identifier &quot;touchpad tweaked catchall&quot; MatchIsTouchpad &quot;on&quot; Driver &quot;synaptics&quot; Option &quot;TapButton1&quot; &quot;1&quot; Option &quot;TapButton2&quot; &quot;3&quot; Option &quot;TapButton3&quot; &quot;2&quot; Option &quot;SpecialScrollAreaRight&quot; &quot;false&quot; Option &quot;VertEdgeScroll&quot; &quot;false&quot; Option &quot;VertTwoFingerScroll&quot; &quot;true&quot; Option &quot;RTCornerButton&quot; &quot;3&quot; Option &quot;RBCornerButton&quot; &quot;3&quot; Option &quot;LTCornerButton&quot; &quot;2&quot; Option &quot;LBCornerButton&quot; &quot;2&quot;EndSectionApós reiniciar o S.O. ficou a funcionar." />
+<link rel="canonical" href="http://localhost:4000/2012/10/28/debian-wheezy-activar-o-scroll-dois-dedos-e-a-ac-o-de-tap.html" />
+<meta property="og:url" content="http://localhost:4000/2012/10/28/debian-wheezy-activar-o-scroll-dois-dedos-e-a-ac-o-de-tap.html" />
+<meta property="og:site_name" content="Notas do Paulo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-10-28T00:00:00+01:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2012/10/28/debian-wheezy-activar-o-scroll-dois-dedos-e-a-ac-o-de-tap.html","headline":"debian wheezy - activar o scroll dois dedos e a acção de tap","dateModified":"2012-10-28T00:00:00+01:00","datePublished":"2012-10-28T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2012/10/28/debian-wheezy-activar-o-scroll-dois-dedos-e-a-ac-o-de-tap.html"},"description":"Ao instalar o wheezy no meu portatil, deixei de poder usar os dois dedos para fazer o scroll e o tap (simulação do click com o botão direito).Depois de alguma pesquisa encontrei este artigo nos forums de utilizadores Debian.Então o que fiz foi criar o ficheiro 42-synaptics.conf na directoria /etc/X11/xorg.conf.d/e coloquei o seguinte conteudo:Section &quot;InputClass&quot; Identifier &quot;touchpad tweaked catchall&quot; MatchIsTouchpad &quot;on&quot; Driver &quot;synaptics&quot; Option &quot;TapButton1&quot; &quot;1&quot; Option &quot;TapButton2&quot; &quot;3&quot; Option &quot;TapButton3&quot; &quot;2&quot; Option &quot;SpecialScrollAreaRight&quot; &quot;false&quot; Option &quot;VertEdgeScroll&quot; &quot;false&quot; Option &quot;VertTwoFingerScroll&quot; &quot;true&quot; Option &quot;RTCornerButton&quot; &quot;3&quot; Option &quot;RBCornerButton&quot; &quot;3&quot; Option &quot;LTCornerButton&quot; &quot;2&quot; Option &quot;LBCornerButton&quot; &quot;2&quot;EndSectionApós reiniciar o S.O. ficou a funcionar.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a id="a-title" href="/">
+                <h1>Notas do Paulo</h1>
+            </a>
+            <h2>Notas sobre diversos temas, normalmente relacionados com tecnologia</h2>
+
+            <a href="/">Blog</a>
+            <a href="/sobre/">Sobre</a>
         </div>
-    </head>
-    <body>
+    </header>
 
-        
-          <h2>debian wheezy - activar o scroll dois dedos e a acção de tap</h2>
-<p class="meta">28 Oct 2012</p>
+    <div class="container">
+        <section id="main_content">
+            <small>28 October 2012</small>
+<h1>debian wheezy - activar o scroll dois dedos e a acção de tap</h1>
 
-<div class="post">
 <div class='post'>
 Ao instalar o wheezy no meu portatil, deixei de poder usar os dois dedos para fazer o scroll e o tap (simulação do click com o botão direito).<br /><br />Depois de alguma pesquisa encontrei <a href="http://forums.debian.net/viewtopic.php?p=354960" target="_blank">este artigo</a> nos forums de utilizadores Debian.<br /><br />Então o que fiz foi criar o ficheiro 42-synaptics.conf na directoria <br /><pre>/etc/X11/xorg.conf.d/</pre>e coloquei o seguinte conteudo:<br /><pre>Section "InputClass"<br />    Identifier          "touchpad tweaked catchall"<br />    MatchIsTouchpad     "on"<br />    Driver              "synaptics"<br /><br />    Option              "TapButton1" "1"<br />    Option              "TapButton2" "3"<br />    Option              "TapButton3" "2"<br /><br />    Option              "SpecialScrollAreaRight" "false"<br />    Option              "VertEdgeScroll" "false"<br />    Option              "VertTwoFingerScroll" "true"<br /><br />    Option              "RTCornerButton" "3"<br />    Option              "RBCornerButton" "3"<br />    Option              "LTCornerButton" "2"<br />    Option              "LBCornerButton" "2"<br />EndSection<br /></pre><br />Após reiniciar o S.O. ficou a funcionar.<br /><span style="font-weight: bold;"></span></div>
 
 
-</div>
 
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                paulocruz.com.pt<br />
-              </p>
-            </div>
-	    <div class="contact">
-              <p>
-                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
-              </p>
-            </div>
+  <small>tags: <button></button></small>
 
-          </div>
+        </section>
+    </div>
+    <div class="footer">
+        <div class="contact">
+            paulocruz.com.pt<br />
         </div>
+    </div>
 
-    </body>
+    
+</body>
+
 </html>

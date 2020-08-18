@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Watchguard - reencaminhamento de portas
 date: 2019-11-04
 author: Paulo

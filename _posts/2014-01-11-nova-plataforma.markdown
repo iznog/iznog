@@ -1,6 +1,7 @@
 ---
 title: Nova plataforma do site
-layout: default
+layout: post
+date: 2014-01-11
 ---
 
 # Nova plataforma do site

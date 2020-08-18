@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: Fazer o upload do site criado com o jekyll de forma facil com o glynn
+date: 2015-03-09
 categories: jekyll
 ---
 # Fazer o upload do site criado com o jekyll de forma facil com o glynn

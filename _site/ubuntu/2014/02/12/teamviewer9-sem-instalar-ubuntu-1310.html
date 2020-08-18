@@ -1,71 +1,91 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+<html lang="en-US">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-	<div id="header">	
-        	<title>Utilizacao do teamviewer 9 sem instalar</title>
-	        <meta name="viewport" content="width=device-width">
-	</div>
-	<div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
-            <a class="extra" href="/">Blog</a>
-            <a class="extra" href="/sobre/">Sobre</a>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Utilizacao do teamviewer 9 sem instalar | Notas do Paulo</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Utilizacao do teamviewer 9 sem instalar" />
+<meta name="author" content="Paulo Cruz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="O Teamviewer é um software de assistência remota útil quando precisar de ajudar um(a) amigo(a) ou precisar de ajuda. A sua utilização individual é gratuita (o que não se aplica para uso profissional)." />
+<meta property="og:description" content="O Teamviewer é um software de assistência remota útil quando precisar de ajudar um(a) amigo(a) ou precisar de ajuda. A sua utilização individual é gratuita (o que não se aplica para uso profissional)." />
+<link rel="canonical" href="http://localhost:4000/ubuntu/2014/02/12/teamviewer9-sem-instalar-ubuntu-1310.html" />
+<meta property="og:url" content="http://localhost:4000/ubuntu/2014/02/12/teamviewer9-sem-instalar-ubuntu-1310.html" />
+<meta property="og:site_name" content="Notas do Paulo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-02-12T00:00:00+00:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/ubuntu/2014/02/12/teamviewer9-sem-instalar-ubuntu-1310.html","headline":"Utilizacao do teamviewer 9 sem instalar","dateModified":"2014-02-12T00:00:00+00:00","datePublished":"2014-02-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ubuntu/2014/02/12/teamviewer9-sem-instalar-ubuntu-1310.html"},"author":{"@type":"Person","name":"Paulo Cruz"},"description":"O Teamviewer é um software de assistência remota útil quando precisar de ajudar um(a) amigo(a) ou precisar de ajuda. A sua utilização individual é gratuita (o que não se aplica para uso profissional).","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a id="a-title" href="/">
+                <h1>Notas do Paulo</h1>
+            </a>
+            <h2>Notas sobre diversos temas, normalmente relacionados com tecnologia</h2>
+
+            <a href="/">Blog</a>
+            <a href="/sobre/">Sobre</a>
         </div>
-    </head>
-    <body>
+    </header>
 
-        
-          <p>O <a href="http://www.teamviewer.com">Teamviewer</a> é um software de assistência remota útil quando precisar de ajudar um(a) amigo(a) ou precisar de ajuda. A sua utilização individual é gratuita (o que não se aplica para uso profissional).</p>
+    <div class="container">
+        <section id="main_content">
+            <small>12 February 2014</small>
+<h1>Utilizacao do teamviewer 9 sem instalar</h1>
+
+<p>O <a href="http://www.teamviewer.com">Teamviewer</a> é um software de assistência remota útil quando precisar de ajudar um(a) amigo(a) ou precisar de ajuda. A sua utilização individual é gratuita (o que não se aplica para uso profissional).</p>
 
 <p>Uma das vantagens, é que o mesmo funciona, tanto em Windows, como OSX ou Linux.</p>
 
 <p>Assim para linux poderemos instalar um dos pacotes adequado para a distribuição que usamos, ou alternativamente, usar a versão para distribuições não suportadas, que pode inclusivamente ser instalada sem serem necessários privilégios de administração no computador em causa.</p>
 
-<h2>Instalação em Ubuntu 32 e 64bits (13.10) desta ultima opção:</h2>
+<h2 id="instalação-em-ubuntu-32-e-64bits-1310-desta-ultima-opção">Instalação em Ubuntu 32 e 64bits (13.10) desta ultima opção:</h2>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">tar</span> <span class="o">-</span><span class="n">xzvf</span> <span class="n">team_viewer</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">tar</span> <span class="o">-</span><span class="n">xzvf</span> <span class="n">team_viewer</span><span class="p">.</span><span class="nf">tar</span><span class="p">.</span><span class="nf">gz</span>
 <span class="n">cd</span> <span class="o">&lt;</span><span class="n">directoria</span> <span class="n">teamviewer</span><span class="o">&gt;</span></code></pre></figure>
 
-<p>iniciar com </p>
+<p>iniciar com</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">.</span><span class="n n-Operator">/</span><span class="n">teamviewer</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">.</span><span class="nf">/</span><span class="n">teamviewer</span></code></pre></figure>
 
 <p>Caso dê erro verificar as dependências em falta com:</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">.</span><span class="n n-Operator">/</span><span class="n">tv_setup</span> <span class="o">--</span><span class="n">checklibs</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">.</span><span class="nf">/</span><span class="n">tv_setup</span> <span class="o">--</span><span class="n">checklibs</span></code></pre></figure>
 
 <p>Instalar as dependências indicadas.</p>
 
 <p>No teste que efectuei precisei de instalar a seguinte libraria (ubuntu 64bits)</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="ss">libxtst6</span><span class="p">:</span><span class="n">i386</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libxtst6</span><span class="ss">:i386</span></code></pre></figure>
 
 <p>Após estes passos ficou a funcionar correctamente</p>
 
-<p>. </p>
+<p>.</p>
 
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                paulocruz.com.pt<br />
-              </p>
-            </div>
-	    <div class="contact">
-              <p>
-                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
-              </p>
-            </div>
 
-          </div>
+  <small>tags: <button></button></small>
+
+        </section>
+    </div>
+    <div class="footer">
+        <div class="contact">
+            paulocruz.com.pt<br />
         </div>
+    </div>
 
-    </body>
+    
+</body>
+
 </html>

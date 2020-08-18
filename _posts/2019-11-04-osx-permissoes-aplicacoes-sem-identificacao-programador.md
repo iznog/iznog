@@ -1,12 +1,11 @@
 ---
-layout: default
+layout: post
 title: OSX - permissão de aplicações sem permissões de programadores
 date: 2019-11-04
 author: Paulo
 categories: OSX
+tags: osx apple
 ---
-
-# OSX - permissão de aplicações sem permissões de programadores
 
 Para que se possa executar a aplicação a instalar, mas que o programador não é reconhecido pela Apple, podemos executar o comando seguinte na imagem descarregada, antes de a montar: 
 

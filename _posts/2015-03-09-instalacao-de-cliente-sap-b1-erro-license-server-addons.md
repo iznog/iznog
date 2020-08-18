@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: Erro de ligacao ao servidor de licenças pelos add-ons
+date: 2015-03-09
 categories: SAP B1
 ---
 # Erro de ligacao ao servidor de licenças pelos add-ons

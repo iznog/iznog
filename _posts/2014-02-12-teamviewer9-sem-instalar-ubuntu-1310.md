@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: post
 title: Utilizacao do teamviewer 9 sem instalar
+date: 2014-02-12
+author: Paulo Cruz
 categories: ubuntu
 ---
 

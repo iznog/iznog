@@ -1,52 +1,65 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+<html lang="en-US">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-	<div id="header">	
-        	<title>Submeter informação de CD's para o MusicBrainz em Ubuntu (ou debian)</title>
-	        <meta name="viewport" content="width=device-width">
-	</div>
-	<div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
-            <a class="extra" href="/">Blog</a>
-            <a class="extra" href="/sobre/">Sobre</a>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Submeter informação de CD’s para o MusicBrainz em Ubuntu (ou debian) | Notas do Paulo</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Submeter informação de CD’s para o MusicBrainz em Ubuntu (ou debian)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ao coloca um CD de audio no leitor, muitos serão os utilizadores que irão obter informação sobre o CD, suas faixas, duração, imagens dos CD&#39;s, etc, a partir de uma base de dados como o MusicBrainz.Mas para podermos usar a informação constante nesta, alguém também terá que submeter os dados, visto que informação é obtida através da sua comunidade de utilizadores.Assim se pretender submeter ou actualizar informação de um CD (como por exemplo o disc ID) para o MusicBrainz, poderá usar a aplicação MusicBrainZ Picard.Para instalar no Ubuntu (testado na 12.04) poderá usar a versão que está nos repositório ou alternativamente&nbsp; a versão disponibilizada através do PPA (Personal Package Archives) da MusicBrainz:Para a segunda alternativa deve-se proceder da seguinte forma (garantirá a versão mais recente):Abrir um terminal e depois executar os seguintes comandos: sudo apt-add-repository ppa:musicbrainz-developers/stableConfirmar com a tecla ENTER após o surgimento da questão se pretende adicionar o repositorio Actualizar a lista de pacotes com sudo apt-get updateInstalar a aplicação &quot;Picard&quot; sudo apt-get install picardSe tudo correr normalmente deverá estar agora disponível a aplicação Picard na sua versão mais recente." />
+<meta property="og:description" content="Ao coloca um CD de audio no leitor, muitos serão os utilizadores que irão obter informação sobre o CD, suas faixas, duração, imagens dos CD&#39;s, etc, a partir de uma base de dados como o MusicBrainz.Mas para podermos usar a informação constante nesta, alguém também terá que submeter os dados, visto que informação é obtida através da sua comunidade de utilizadores.Assim se pretender submeter ou actualizar informação de um CD (como por exemplo o disc ID) para o MusicBrainz, poderá usar a aplicação MusicBrainZ Picard.Para instalar no Ubuntu (testado na 12.04) poderá usar a versão que está nos repositório ou alternativamente&nbsp; a versão disponibilizada através do PPA (Personal Package Archives) da MusicBrainz:Para a segunda alternativa deve-se proceder da seguinte forma (garantirá a versão mais recente):Abrir um terminal e depois executar os seguintes comandos: sudo apt-add-repository ppa:musicbrainz-developers/stableConfirmar com a tecla ENTER após o surgimento da questão se pretende adicionar o repositorio Actualizar a lista de pacotes com sudo apt-get updateInstalar a aplicação &quot;Picard&quot; sudo apt-get install picardSe tudo correr normalmente deverá estar agora disponível a aplicação Picard na sua versão mais recente." />
+<link rel="canonical" href="http://localhost:4000/2013/09/10/submeter-informa-o-de-cd-s-para-o-musicbrainz-em-ubuntu-ou-debian.html" />
+<meta property="og:url" content="http://localhost:4000/2013/09/10/submeter-informa-o-de-cd-s-para-o-musicbrainz-em-ubuntu-ou-debian.html" />
+<meta property="og:site_name" content="Notas do Paulo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-09-10T00:00:00+01:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2013/09/10/submeter-informa-o-de-cd-s-para-o-musicbrainz-em-ubuntu-ou-debian.html","headline":"Submeter informação de CD’s para o MusicBrainz em Ubuntu (ou debian)","dateModified":"2013-09-10T00:00:00+01:00","datePublished":"2013-09-10T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2013/09/10/submeter-informa-o-de-cd-s-para-o-musicbrainz-em-ubuntu-ou-debian.html"},"description":"Ao coloca um CD de audio no leitor, muitos serão os utilizadores que irão obter informação sobre o CD, suas faixas, duração, imagens dos CD&#39;s, etc, a partir de uma base de dados como o MusicBrainz.Mas para podermos usar a informação constante nesta, alguém também terá que submeter os dados, visto que informação é obtida através da sua comunidade de utilizadores.Assim se pretender submeter ou actualizar informação de um CD (como por exemplo o disc ID) para o MusicBrainz, poderá usar a aplicação MusicBrainZ Picard.Para instalar no Ubuntu (testado na 12.04) poderá usar a versão que está nos repositório ou alternativamente&nbsp; a versão disponibilizada através do PPA (Personal Package Archives) da MusicBrainz:Para a segunda alternativa deve-se proceder da seguinte forma (garantirá a versão mais recente):Abrir um terminal e depois executar os seguintes comandos: sudo apt-add-repository ppa:musicbrainz-developers/stableConfirmar com a tecla ENTER após o surgimento da questão se pretende adicionar o repositorio Actualizar a lista de pacotes com sudo apt-get updateInstalar a aplicação &quot;Picard&quot; sudo apt-get install picardSe tudo correr normalmente deverá estar agora disponível a aplicação Picard na sua versão mais recente.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a id="a-title" href="/">
+                <h1>Notas do Paulo</h1>
+            </a>
+            <h2>Notas sobre diversos temas, normalmente relacionados com tecnologia</h2>
+
+            <a href="/">Blog</a>
+            <a href="/sobre/">Sobre</a>
         </div>
-    </head>
-    <body>
+    </header>
 
-        
-          <h2>Submeter informação de CD's para o MusicBrainz em Ubuntu (ou debian)</h2>
-<p class="meta">10 Sep 2013</p>
+    <div class="container">
+        <section id="main_content">
+            <small>10 September 2013</small>
+<h1>Submeter informação de CD's para o MusicBrainz em Ubuntu (ou debian)</h1>
 
-<div class="post">
 <div class='post'>
 Ao coloca um CD de audio no leitor, muitos serão os utilizadores que irão obter informação sobre o CD, suas faixas, duração, imagens dos CD's, etc, a partir de uma base de dados como o <a href="http://musicbrainz.org/" target="_blank">MusicBrainz</a>.<br /><br />Mas para podermos usar a informação constante nesta, alguém também terá que submeter os dados, visto que informação é obtida através da sua comunidade de utilizadores.<br /><br />Assim se pretender submeter ou actualizar informação de um CD (como por exemplo o disc ID) para o MusicBrainz, poderá usar a aplicação <a href="http://musicbrainz.org/doc/MusicBrainz_Picard" target="_blank">MusicBrainZ Picard.</a><br /><br /><br />Para instalar no Ubuntu (testado na 12.04) poderá usar a versão que está nos repositório ou alternativamente&nbsp; a versão disponibilizada através do PPA (Personal Package Archives) da MusicBrainz:<br /><br />Para a segunda alternativa deve-se proceder da seguinte forma (garantirá a versão mais recente):<br /><br />Abrir um terminal e depois executar os seguintes comandos: <br /><pre>sudo apt-add-repository ppa:musicbrainz-developers/stable</pre><br />Confirmar com a tecla ENTER após o surgimento da questão se pretende adicionar o repositorio <br />Actualizar a lista de pacotes com <br /><pre>sudo apt-get update</pre><br />Instalar a aplicação "Picard" <br /><pre>sudo apt-get install picard</pre><br />Se tudo correr normalmente deverá estar agora disponível a aplicação Picard na sua versão mais recente. </div>
 
 
-</div>
 
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                paulocruz.com.pt<br />
-              </p>
-            </div>
-	    <div class="contact">
-              <p>
-                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
-              </p>
-            </div>
+  <small>tags: <button></button></small>
 
-          </div>
+        </section>
+    </div>
+    <div class="footer">
+        <div class="contact">
+            paulocruz.com.pt<br />
         </div>
+    </div>
 
-    </body>
+    
+</body>
+
 </html>

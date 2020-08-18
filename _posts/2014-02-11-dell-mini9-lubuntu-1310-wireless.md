@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: instalação de driver wireless DELL mini9
+date: 2014-02-11
 categories: linux
 author: Paulo Cruz
 ---

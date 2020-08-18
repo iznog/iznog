@@ -1,52 +1,65 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+<html lang="en-US">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-	<div id="header">	
-        	<title>Instalacao do Skype no debian wheezy</title>
-	        <meta name="viewport" content="width=device-width">
-	</div>
-	<div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
-            <a class="extra" href="/">Blog</a>
-            <a class="extra" href="/sobre/">Sobre</a>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Instalacao do Skype no debian wheezy | Notas do Paulo</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Instalacao do Skype no debian wheezy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Para instalar o skype no debian wheezy, deveremos aceder ao site www.skype.com e descarregar a versão para debian 7.0 (multiarch).Abrir uma consolaVerificar qual a arquitectura que está instalada (caso não saiba):uname -aCaso a instalação seja de 32 bits então deverá aparecer no resultado a referência a &quot;i686&quot;, no caso de 64 bits, deverá aparecer &quot;amd64&quot; No caso de instalação na arquitectura de 32 bits, deverá ser necessário apenas efectuar os seguintes comandos: sudpkg -i caminho_para_o_ficheiro_instalacao_skypeapt-get -f installNo caso de instalação na arquitectura de 64 bits, deverá ser necessário verificar quais as arquitecturas para o qual o dpkg está configurado para instalar: sudpkg --print-foreign-architecturesCaso não apareça como resultado &quot;i386&quot;, deveremos efectuar os seguintes comandos: dpkg --add-architecture i386apt-get updateDe seguida efectuar os comandos seguintes para efectuar a instalação do skype: dpkg -i caminho_para_o_ficheiro_instalacao_skypeapt-get -f installEstes passos deverão ser os necessários para proceder à instalação da actual versão do skype para debian 7.0 já suportando o &quot;multiarch&quot;" />
+<meta property="og:description" content="Para instalar o skype no debian wheezy, deveremos aceder ao site www.skype.com e descarregar a versão para debian 7.0 (multiarch).Abrir uma consolaVerificar qual a arquitectura que está instalada (caso não saiba):uname -aCaso a instalação seja de 32 bits então deverá aparecer no resultado a referência a &quot;i686&quot;, no caso de 64 bits, deverá aparecer &quot;amd64&quot; No caso de instalação na arquitectura de 32 bits, deverá ser necessário apenas efectuar os seguintes comandos: sudpkg -i caminho_para_o_ficheiro_instalacao_skypeapt-get -f installNo caso de instalação na arquitectura de 64 bits, deverá ser necessário verificar quais as arquitecturas para o qual o dpkg está configurado para instalar: sudpkg --print-foreign-architecturesCaso não apareça como resultado &quot;i386&quot;, deveremos efectuar os seguintes comandos: dpkg --add-architecture i386apt-get updateDe seguida efectuar os comandos seguintes para efectuar a instalação do skype: dpkg -i caminho_para_o_ficheiro_instalacao_skypeapt-get -f installEstes passos deverão ser os necessários para proceder à instalação da actual versão do skype para debian 7.0 já suportando o &quot;multiarch&quot;" />
+<link rel="canonical" href="http://localhost:4000/2013/02/04/instalacao-do-skype-no-debian-wheezy.html" />
+<meta property="og:url" content="http://localhost:4000/2013/02/04/instalacao-do-skype-no-debian-wheezy.html" />
+<meta property="og:site_name" content="Notas do Paulo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-02-04T00:00:00+00:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2013/02/04/instalacao-do-skype-no-debian-wheezy.html","headline":"Instalacao do Skype no debian wheezy","dateModified":"2013-02-04T00:00:00+00:00","datePublished":"2013-02-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2013/02/04/instalacao-do-skype-no-debian-wheezy.html"},"description":"Para instalar o skype no debian wheezy, deveremos aceder ao site www.skype.com e descarregar a versão para debian 7.0 (multiarch).Abrir uma consolaVerificar qual a arquitectura que está instalada (caso não saiba):uname -aCaso a instalação seja de 32 bits então deverá aparecer no resultado a referência a &quot;i686&quot;, no caso de 64 bits, deverá aparecer &quot;amd64&quot; No caso de instalação na arquitectura de 32 bits, deverá ser necessário apenas efectuar os seguintes comandos: sudpkg -i caminho_para_o_ficheiro_instalacao_skypeapt-get -f installNo caso de instalação na arquitectura de 64 bits, deverá ser necessário verificar quais as arquitecturas para o qual o dpkg está configurado para instalar: sudpkg --print-foreign-architecturesCaso não apareça como resultado &quot;i386&quot;, deveremos efectuar os seguintes comandos: dpkg --add-architecture i386apt-get updateDe seguida efectuar os comandos seguintes para efectuar a instalação do skype: dpkg -i caminho_para_o_ficheiro_instalacao_skypeapt-get -f installEstes passos deverão ser os necessários para proceder à instalação da actual versão do skype para debian 7.0 já suportando o &quot;multiarch&quot;","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a id="a-title" href="/">
+                <h1>Notas do Paulo</h1>
+            </a>
+            <h2>Notas sobre diversos temas, normalmente relacionados com tecnologia</h2>
+
+            <a href="/">Blog</a>
+            <a href="/sobre/">Sobre</a>
         </div>
-    </head>
-    <body>
+    </header>
 
-        
-          <h2>Instalacao do Skype no debian wheezy</h2>
-<p class="meta">04 Feb 2013</p>
+    <div class="container">
+        <section id="main_content">
+            <small>4 February 2013</small>
+<h1>Instalacao do Skype no debian wheezy</h1>
 
-<div class="post">
 <div class='post'>
 Para instalar o skype no debian wheezy, deveremos aceder ao site www.skype.com e descarregar a versão para debian 7.0 (multiarch).<br /><br />Abrir uma consola<br /><br />Verificar qual a arquitectura que está instalada (caso não saiba):<br /><pre>uname -a<br /></pre>Caso a instalação seja de 32 bits então deverá aparecer no resultado a referência a "i686", no caso de 64 bits, deverá aparecer "amd64" <br />No caso de instalação na arquitectura de 32 bits, deverá ser necessário apenas efectuar os seguintes comandos: <br /><pre>su<br />dpkg -i caminho_para_o_ficheiro_instalacao_skype<br />apt-get -f install<br /></pre>No caso de instalação na arquitectura de 64 bits, deverá ser necessário verificar quais as arquitecturas para o qual o dpkg está configurado para instalar: <br /><pre>su<br />dpkg --print-foreign-architectures<br /></pre>Caso não apareça como resultado "i386", deveremos efectuar os seguintes comandos: <br /><pre>dpkg --add-architecture i386<br />apt-get update<br /></pre>De seguida efectuar os comandos seguintes para efectuar a instalação do skype: <br /><pre>dpkg -i caminho_para_o_ficheiro_instalacao_skype<br />apt-get -f install<br /></pre>Estes passos deverão ser os necessários para proceder à instalação da actual versão do skype para debian 7.0 já suportando o "multiarch"  </div>
 
 
-</div>
 
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                paulocruz.com.pt<br />
-              </p>
-            </div>
-	    <div class="contact">
-              <p>
-                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
-              </p>
-            </div>
+  <small>tags: <button></button></small>
 
-          </div>
+        </section>
+    </div>
+    <div class="footer">
+        <div class="contact">
+            paulocruz.com.pt<br />
         </div>
+    </div>
 
-    </body>
+    
+</body>
+
 </html>

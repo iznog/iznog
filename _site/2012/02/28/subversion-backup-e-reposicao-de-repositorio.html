@@ -1,52 +1,65 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+<html lang="en-US">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-	<div id="header">	
-        	<title>Subversion - Backup e reposicao de repositorio</title>
-	        <meta name="viewport" content="width=device-width">
-	</div>
-	<div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
-            <a class="extra" href="/">Blog</a>
-            <a class="extra" href="/sobre/">Sobre</a>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Subversion - Backup e reposicao de repositorio | Notas do Paulo</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Subversion - Backup e reposicao de repositorio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tenho por norma um repositório subversion para guardar alguns conteúdos que normalmente uso e eventualmente terei a necessidade de reaver versões anteriores.No entanto é necessário também fazer backups. Para efectuar backup do repositorio executo o comando:svnadmin dump /caminho_do_repositorio &gt;backup_repositorio.svngzip backup_repositorio.svnPara efectuar a reposição do mesmo poderemos fazer:gunzip backup_repositorio.svn.gzsvnadmin create /caminho_novo_repositoriosvnadmin load /caminho_novo_repositorio &lt;backup_repositorio.svn" />
+<meta property="og:description" content="Tenho por norma um repositório subversion para guardar alguns conteúdos que normalmente uso e eventualmente terei a necessidade de reaver versões anteriores.No entanto é necessário também fazer backups. Para efectuar backup do repositorio executo o comando:svnadmin dump /caminho_do_repositorio &gt;backup_repositorio.svngzip backup_repositorio.svnPara efectuar a reposição do mesmo poderemos fazer:gunzip backup_repositorio.svn.gzsvnadmin create /caminho_novo_repositoriosvnadmin load /caminho_novo_repositorio &lt;backup_repositorio.svn" />
+<link rel="canonical" href="http://localhost:4000/2012/02/28/subversion-backup-e-reposicao-de-repositorio.html" />
+<meta property="og:url" content="http://localhost:4000/2012/02/28/subversion-backup-e-reposicao-de-repositorio.html" />
+<meta property="og:site_name" content="Notas do Paulo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-02-28T00:00:00+00:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2012/02/28/subversion-backup-e-reposicao-de-repositorio.html","headline":"Subversion - Backup e reposicao de repositorio","dateModified":"2012-02-28T00:00:00+00:00","datePublished":"2012-02-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2012/02/28/subversion-backup-e-reposicao-de-repositorio.html"},"description":"Tenho por norma um repositório subversion para guardar alguns conteúdos que normalmente uso e eventualmente terei a necessidade de reaver versões anteriores.No entanto é necessário também fazer backups. Para efectuar backup do repositorio executo o comando:svnadmin dump /caminho_do_repositorio &gt;backup_repositorio.svngzip backup_repositorio.svnPara efectuar a reposição do mesmo poderemos fazer:gunzip backup_repositorio.svn.gzsvnadmin create /caminho_novo_repositoriosvnadmin load /caminho_novo_repositorio &lt;backup_repositorio.svn","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a id="a-title" href="/">
+                <h1>Notas do Paulo</h1>
+            </a>
+            <h2>Notas sobre diversos temas, normalmente relacionados com tecnologia</h2>
+
+            <a href="/">Blog</a>
+            <a href="/sobre/">Sobre</a>
         </div>
-    </head>
-    <body>
+    </header>
 
-        
-          <h2>Subversion - Backup e reposicao de repositorio</h2>
-<p class="meta">28 Feb 2012</p>
+    <div class="container">
+        <section id="main_content">
+            <small>28 February 2012</small>
+<h1>Subversion - Backup e reposicao de repositorio</h1>
 
-<div class="post">
 <div class='post'>
 Tenho por norma um repositório subversion para  guardar alguns conteúdos que normalmente uso e eventualmente terei a necessidade de reaver versões anteriores.<br /><br />No entanto é necessário também fazer backups. <br /><br />Para efectuar backup do repositorio executo o comando:<br /><pre>svnadmin dump /caminho_do_repositorio &gt;backup_repositorio.svn</pre><pre>gzip backup_repositorio.svn</pre><br />Para efectuar a reposição do mesmo poderemos fazer:<br /><pre>gunzip backup_repositorio.svn.gz</pre><pre>svnadmin create /caminho_novo_repositorio</pre><pre>svnadmin load /caminho_novo_repositorio &lt;backup_repositorio.svn </pre><br /><br /><br /><br /><br /></div>
 
 
-</div>
 
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                paulocruz.com.pt<br />
-              </p>
-            </div>
-	    <div class="contact">
-              <p>
-                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
-              </p>
-            </div>
+  <small>tags: <button></button></small>
 
-          </div>
+        </section>
+    </div>
+    <div class="footer">
+        <div class="contact">
+            paulocruz.com.pt<br />
         </div>
+    </div>
 
-    </body>
+    
+</body>
+
 </html>

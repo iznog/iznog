@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: Workaround para aparecer icon do Dropbox no Xubuntu 16.04
+date: 2016-04-20
 categories: dropbox
 ---
 # Workaround para aparecer icon do Dropbox no Xubuntu 16.04

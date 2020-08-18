@@ -1,1 +1,10 @@
+title: Notas do Paulo
+description: Notas sobre diversos temas, normalmente relacionados com tecnologia
+
+show_downloads: false
+google_analytics: 
 theme: jekyll-theme-hacker
+
+plugins:
+  - jekyll-include-cache
+  - jekyll-seo

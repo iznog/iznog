@@ -1,73 +1,92 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+<html lang="en-US">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-	<div id="header">	
-        	<title>Workaround para aparecer icon do Dropbox no Xubuntu 16.04</title>
-	        <meta name="viewport" content="width=device-width">
-	</div>
-	<div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
-            <a class="extra" href="/">Blog</a>
-            <a class="extra" href="/sobre/">Sobre</a>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Workaround para aparecer icon do Dropbox no Xubuntu 16.04 | Notas do Paulo</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Workaround para aparecer icon do Dropbox no Xubuntu 16.04" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Workaround para aparecer icon do Dropbox no Xubuntu 16.04" />
+<meta property="og:description" content="Workaround para aparecer icon do Dropbox no Xubuntu 16.04" />
+<link rel="canonical" href="http://localhost:4000/dropbox/2016/04/20/icon-dropbox-no-xubuntu-1604.html" />
+<meta property="og:url" content="http://localhost:4000/dropbox/2016/04/20/icon-dropbox-no-xubuntu-1604.html" />
+<meta property="og:site_name" content="Notas do Paulo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-04-20T00:00:00+01:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/dropbox/2016/04/20/icon-dropbox-no-xubuntu-1604.html","headline":"Workaround para aparecer icon do Dropbox no Xubuntu 16.04","dateModified":"2016-04-20T00:00:00+01:00","datePublished":"2016-04-20T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/dropbox/2016/04/20/icon-dropbox-no-xubuntu-1604.html"},"description":"Workaround para aparecer icon do Dropbox no Xubuntu 16.04","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a id="a-title" href="/">
+                <h1>Notas do Paulo</h1>
+            </a>
+            <h2>Notas sobre diversos temas, normalmente relacionados com tecnologia</h2>
+
+            <a href="/">Blog</a>
+            <a href="/sobre/">Sobre</a>
         </div>
-    </head>
-    <body>
+    </header>
 
-        
-          <h1>Workaround para aparecer icon do Dropbox no Xubuntu 16.04</h1>
+    <div class="container">
+        <section id="main_content">
+            <small>20 April 2016</small>
+<h1>Workaround para aparecer icon do Dropbox no Xubuntu 16.04</h1>
+
+<h1 id="workaround-para-aparecer-icon-do-dropbox-no-xubuntu-1604">Workaround para aparecer icon do Dropbox no Xubuntu 16.04</h1>
 
 <p>Sendo utilizador de xubuntu, normalmente nas versões LTS e nomeadamente da versão 16.04 e também utilizador do Dropbox para alguns tipos de conteudos, deparei-me com o problema do icon de notificação do Dropbox, não aparecer correctamente.</p>
 
-<p>Após alguma pesquisa encontrei no AskUbuntu este post <a href="http:askubuntu.com">http://askubuntu.com</a>.</p>
+<p>Após alguma pesquisa encontrei no AskUbuntu este post [http://askubuntu.com] (http:askubuntu.com).</p>
 
 <p>Resumindo o que resultou no meu caso foi copiar o atalho dropbox.desktop existente na pasta ~/.config/autostart/, por exemplo para dropbox_hack.desktop e efectuar as seguintes alterações como sugerido por um dos utilizadores que comentou no post que referi anteriormente:</p>
 
-<p>Criar uma directoria na pasta do utilizador com  o nome &quot;bin&quot; :</p>
+<p>Criar uma directoria na pasta do utilizador com  o nome “bin” :</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~
-mkdir bin</code></pre></figure>
+<span class="nb">mkdir </span>bin</code></pre></figure>
 
 <p>criar um script com o nome dropbox_hack.sh com o seguinte conteudo:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="ch">#!/bin/bash</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
 
-<span class="c1"># Pára alguma instância do dropbox que esteja a correr</span>
+<span class="c"># Pára alguma instância do dropbox que esteja a correr</span>
 dropbox stop
 
-<span class="c1"># inicia novamente o Dropbox</span>
-dbus-launch dropbox start -i</code></pre></figure>
+<span class="c"># inicia novamente o Dropbox</span>
+dbus-launch dropbox start <span class="nt">-i</span></code></pre></figure>
 
 <p>e de seguida definimos o script como executável</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">chmod +x ~/bin/dropbox_hack.sh</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">chmod</span> +x ~/bin/dropbox_hack.sh</code></pre></figure>
 
-<p>Editamos o atalho da aplicação do dropbox criado de forma a que a linha Exec= contenha o caminho para o ficheiro criado anteriormente, no exemplo seria /home/<nomeutilizador>/bin/dropbox_hack.sh</p>
+<p>Editamos o atalho da aplicação do dropbox criado de forma a que a linha Exec= contenha o caminho para o ficheiro criado anteriormente, no exemplo seria /home/<nomeutilizador>/bin/dropbox_hack.sh</nomeutilizador></p>
 
-<p>O atalho original do dropbox deve ser removido do arranque, por exemplo, eliminando o ficheiro original em &quot;~/.config/autostart/&quot; com o nome &quot;dropbox.desktop&quot;</p>
+<p>O atalho original do dropbox deve ser removido do arranque, por exemplo, eliminando o ficheiro original em “~/.config/autostart/” com o nome “dropbox.desktop”</p>
 
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                paulocruz.com.pt<br />
-              </p>
-            </div>
-	    <div class="contact">
-              <p>
-                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
-              </p>
-            </div>
 
-          </div>
+  <small>tags: <button></button></small>
+
+        </section>
+    </div>
+    <div class="footer">
+        <div class="contact">
+            paulocruz.com.pt<br />
         </div>
+    </div>
 
-    </body>
+    
+</body>
+
 </html>

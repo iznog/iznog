@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: Encriptar e formatar discos em linux
+date: 2017-11-12
 categories: linux
 ---
 # Encriptar e formatar discos em linux

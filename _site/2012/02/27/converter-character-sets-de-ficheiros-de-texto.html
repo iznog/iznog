@@ -1,52 +1,65 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+<html lang="en-US">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-	<div id="header">	
-        	<title>Converter character sets de ficheiros de texto</title>
-	        <meta name="viewport" content="width=device-width">
-	</div>
-	<div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">www.paulocruz.com.pt</a></h1>
-            <a class="extra" href="/">Blog</a>
-            <a class="extra" href="/sobre/">Sobre</a>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Converter character sets de ficheiros de texto | Notas do Paulo</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Converter character sets de ficheiros de texto" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="&nbsp;No decorrer do desenvolvimento de um projecto, efectuado numa máquina de desenvolvimento baseado em Windows, verificou-se a necessidade da conversão do ficheiro resultante para efectuar a importação do ficheiro de SQL no servidor da base de dados. Esta necessidade surgiu pelo facto de que o servidor Web apresentava os caracteres de forma errada obtidos na BD, pois estava a usar o character set UTF8.O conteudo do ficheiro SQL foi convertido então para o &quot;latin1&quot; usando a aplicação iconv.Comando usado:iconv -c --from-code CP1251 --to-code UTF8 bd_desenvolvimento.sql &gt;bd_convertido.sql&nbsp;Esta conversão foi efectuada em Ubuntu 11.04 e o projecto foi instalado num servidor ubuntu 10.04LTS." />
+<meta property="og:description" content="&nbsp;No decorrer do desenvolvimento de um projecto, efectuado numa máquina de desenvolvimento baseado em Windows, verificou-se a necessidade da conversão do ficheiro resultante para efectuar a importação do ficheiro de SQL no servidor da base de dados. Esta necessidade surgiu pelo facto de que o servidor Web apresentava os caracteres de forma errada obtidos na BD, pois estava a usar o character set UTF8.O conteudo do ficheiro SQL foi convertido então para o &quot;latin1&quot; usando a aplicação iconv.Comando usado:iconv -c --from-code CP1251 --to-code UTF8 bd_desenvolvimento.sql &gt;bd_convertido.sql&nbsp;Esta conversão foi efectuada em Ubuntu 11.04 e o projecto foi instalado num servidor ubuntu 10.04LTS." />
+<link rel="canonical" href="http://localhost:4000/2012/02/27/converter-character-sets-de-ficheiros-de-texto.html" />
+<meta property="og:url" content="http://localhost:4000/2012/02/27/converter-character-sets-de-ficheiros-de-texto.html" />
+<meta property="og:site_name" content="Notas do Paulo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-02-27T00:00:00+00:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2012/02/27/converter-character-sets-de-ficheiros-de-texto.html","headline":"Converter character sets de ficheiros de texto","dateModified":"2012-02-27T00:00:00+00:00","datePublished":"2012-02-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2012/02/27/converter-character-sets-de-ficheiros-de-texto.html"},"description":"&nbsp;No decorrer do desenvolvimento de um projecto, efectuado numa máquina de desenvolvimento baseado em Windows, verificou-se a necessidade da conversão do ficheiro resultante para efectuar a importação do ficheiro de SQL no servidor da base de dados. Esta necessidade surgiu pelo facto de que o servidor Web apresentava os caracteres de forma errada obtidos na BD, pois estava a usar o character set UTF8.O conteudo do ficheiro SQL foi convertido então para o &quot;latin1&quot; usando a aplicação iconv.Comando usado:iconv -c --from-code CP1251 --to-code UTF8 bd_desenvolvimento.sql &gt;bd_convertido.sql&nbsp;Esta conversão foi efectuada em Ubuntu 11.04 e o projecto foi instalado num servidor ubuntu 10.04LTS.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a id="a-title" href="/">
+                <h1>Notas do Paulo</h1>
+            </a>
+            <h2>Notas sobre diversos temas, normalmente relacionados com tecnologia</h2>
+
+            <a href="/">Blog</a>
+            <a href="/sobre/">Sobre</a>
         </div>
-    </head>
-    <body>
+    </header>
 
-        
-          <h2>Converter character sets de ficheiros de texto</h2>
-<p class="meta">27 Feb 2012</p>
+    <div class="container">
+        <section id="main_content">
+            <small>27 February 2012</small>
+<h1>Converter character sets de ficheiros de texto</h1>
 
-<div class="post">
 <div class='post'>
 &nbsp;No decorrer do desenvolvimento de um projecto, efectuado numa máquina  de desenvolvimento baseado em Windows, verificou-se a necessidade da  conversão do ficheiro resultante para efectuar a importação do ficheiro  de SQL no servidor da base de dados.       Esta necessidade surgiu pelo facto de que o servidor Web apresentava  os caracteres de forma errada obtidos na BD, pois estava a usar o  character set UTF8.<br />O conteudo do ficheiro SQL foi convertido então para o "latin1" usando a aplicação iconv.<br /><br />Comando usado:<br /><br /><pre>iconv -c --from-code CP1251 --to-code UTF8 bd_desenvolvimento.sql &gt;bd_convertido.sql</pre><pre>&nbsp;</pre>Esta conversão foi efectuada em Ubuntu 11.04 e o projecto foi instalado num servidor ubuntu 10.04LTS.</div>
 
 
-</div>
 
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                paulocruz.com.pt<br />
-              </p>
-            </div>
-	    <div class="contact">
-              <p>
-                <a href="http://jekyllrb.com" target="_blank">Made with Jekyll </a><br />
-              </p>
-            </div>
+  <small>tags: <button></button></small>
 
-          </div>
+        </section>
+    </div>
+    <div class="footer">
+        <div class="contact">
+            paulocruz.com.pt<br />
         </div>
+    </div>
 
-    </body>
+    
+</body>
+
 </html>
