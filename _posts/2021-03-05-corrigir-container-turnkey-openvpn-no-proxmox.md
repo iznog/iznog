@@ -29,15 +29,16 @@ systemctl restart openvpn
 
 Podemos verificar os erros no ficheiro de log criado em /var/log/openvpn e com o nome indicado na configuração que no meu caso será openvpn.log.
 
-No mesmo encontraremos erro a indicar que não foi possivel encontrar a criação da interface tun. Esta mensagem deve-se ao facto de não ser permitido ao container criar determinados dispositivos.
+No mesmo, encontraremos um erro a indicar que não foi possivel a criação da interface tun. Esta mensagem deve-se ao facto de não ser permitido ao container criar determinados dispositivos, visto estar configurado para funcionar no modo "unprivileged".
 
 Para ultrapassar esta questão devemos fazer o seguinte:
 
 Encerramos o container
+
 Adicionamos no proxmox, no ficheiro de configuração do container, em /etc/pve/lxc e com o nome de XXX.conf (em que o XXX será o numero do container, por exemplo 102.conf) o seguinte:
 
 {% highlight bash %}
 lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file 
 {% endhighlight %}
 
-De seguida poderemos iniciar novamente o container e já poderemos experimentar a nossa ligação de VPN.
+De seguida poderemos iniciar novamente o container e já poderemos experimentar a nossa ligação de VPN. Se verificarmos os logs, agora já não temos a mensagem de erro.
