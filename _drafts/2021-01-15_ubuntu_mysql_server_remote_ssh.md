@@ -6,11 +6,9 @@ author: Paulo
 categories: Linux MySQL
 ---
 
-Nas versões mais recentes do Ubuntu ao instalarmos o MySQL Server não é possivel aceder ao utilizador do root com password sem ser no utilizador root do ubuntu.
+Nas versões mais recentes do Ubuntu ao instalarmos o MySQL Server não é possivel aceder ao utilizador do root com password sem ser no utilizador root do sistema operativo.
 
-Para que seja possivel aceder a utilizador root do MySQL mesmo com outro utilizador da instalação do linux, devemos seguir os seguintes passos:
-
-na linha de comandos:
+Para que seja possivel aceder ao utilizador root do MySQL mesmo com outro utilizador da instalação do linux, devemos seguir os seguintes passos na linha de comandos:
 
 {% highlight bash %}
 mysql_secure_installation 
@@ -21,7 +19,7 @@ e seguir os passos.
 aceder ao MySQL
 
 {% highlight bash %}
-> mysql -u root
+mysql -u root
 {% endhighlight %}
 
 Alterar o plugin de autenticação do user root@localhost
