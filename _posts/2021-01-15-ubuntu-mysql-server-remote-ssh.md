@@ -23,7 +23,7 @@ mysql -u root
 {% endhighlight %}
 
 Alterar o plugin de autenticação do user root@localhost
-
+ 
 {% highlight bash %}
 mysql> update user set plugin="mysql_native_password" where host="localhost" and user="root";
 {% endhighlight %}

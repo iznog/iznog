@@ -9,7 +9,7 @@ categories: linux, openvpn, turnkey
 Usando o template turnkey no proxmox para criar um servidor openvpn, após a sua configuração de acordo com os passos da instalação do container, poderemos deparar-nos com um erro em que os clientes de VPN não se conseguem ligar.
 
 Para tentarmos averiguar com mais detalhe os erros, podemos alterar o ficheiro de configuração do servidor de openvpn em /etc/openvpn/server.conf e adicionar as linhas:
-
+ 
 {% highlight bash %}
 log         /var/log/openvpn/openvpn.log
 log-append  /var/log/openvpn/openvpn.log
