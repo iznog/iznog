@@ -9,9 +9,9 @@ Esqueceram-se da vossa password do Windows? E agora?
 Existe uma forma de alterar a vossa password para poderem voltar a ter acesso ao mesmo.
 
 Primeiro, a não ser que já tenham uma pen ou CD disponivel com a uma Live Distro, necessitamos de um computador para efectuar o download de uma.
-Normalmente uso o [Xubuntu] (http://xubuntu.org/) , ou o [Ubuntu] (http://www.ubuntu.com) ou qualquer outro derivado deste último.
+Normalmente uso o [Xubuntu](http://xubuntu.org/) , ou o [Ubuntu](http://www.ubuntu.com) ou qualquer outro derivado deste último.
 
-Depois de fazermos o download do ficheiro ISO, vamos criar uma pen ou um CD com que possamos efectuar o arranque do PC. Como normalmente uso o linux, concretizo usando os passos descritos [aqui] (http://www.paulocruz.com.pt/criar-um-disco-com-dd), para Windows podem seguir [aqui](http://www.paulocruz.com.pt/criar-disco-boot-windows).
+Depois de fazermos o download do ficheiro ISO, vamos criar uma pen ou um CD com que possamos efectuar o arranque do PC. Como normalmente uso o linux, concretizo usando os passos descritos [aqui](http://www.paulocruz.com.pt/criar-um-disco-com-dd), para Windows podem seguir [aqui](http://www.paulocruz.com.pt/criar-disco-boot-windows).
 
 
 Iniciamos o arranque como a Live Linux e montamos a particao do Windows, correspondente à instalação do sistema.
