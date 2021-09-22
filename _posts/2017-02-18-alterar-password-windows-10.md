@@ -22,6 +22,7 @@ Vamos para a pasta "C:\Windows\System32"
 {% endhighlight %}
 
 procuramos o ficheiro cmd.exe e renomeamos para cmd.exe.tmp
+
 {% highlight bash %}
     mv cmd.exe cmd.exe.tmp
 {% endhighlight %}
@@ -40,7 +41,7 @@ voltamos a renomear o ficheiro cmd.exe.tmp para setch.exe
 
 Reiniciamos o computador mas retirando a pen ou CD usado para arrancar com o Live Linux e quando chegamos à janela de login, pressionamos a tecla de SHIFT 5 ou 6 vezes, aparecendo de seguida uma janela de linha de comandos.
 
-*** Nessa janela executamos os seguintes comandos: ***
+***Nessa janela executamos os seguintes comandos:***
 
 Para verificar quais os nomes de utilizador criados, nomeadamente o(s) que pretendemo(s) alterar  a password
 
