@@ -19,7 +19,12 @@ file --mime-type nomedoficheiro.ext
 {% endhighlight %}
 
 
-Desta forma obtemos o mime type do ficheiro. Se pretendermos obter apenas o encoding do ficheiro, podermos usar --mime-encoding em vez de mime-type.
+Desta forma obtemos o mime type do ficheiro. Se pretendermos obter apenas o encoding do ficheiro, podermos usar --mime-encoding em vez de --mime-type.
+
+{% highlight bash %}
+file --mime-encoding nomedoficheiro.ext
+{% endhighlight %}
+
 Podemos no entanto obter as duas informações se usarmos a opção -i :
 
 {% highlight bash %}
