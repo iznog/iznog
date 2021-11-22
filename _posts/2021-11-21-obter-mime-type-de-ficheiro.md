@@ -6,7 +6,6 @@ author: Paulo
 categories: linux
 ---
 
-# Obter mime type de ficheiro
 Já aconteceu um determinado ficheiro aparentar ser de um determinado formato mas a aplicação que usamos não o consegue manipular?
 
 Isso pode acontecer por exemplo, quando a extensão do ficheiro é incorreta. Como poderemos saber qual o tipo de ficheiro que temos?
