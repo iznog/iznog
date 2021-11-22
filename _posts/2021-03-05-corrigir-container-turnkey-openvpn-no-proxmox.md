@@ -3,7 +3,7 @@ layout: post
 title: Corrigir configuração de container turnkey openvpn em proxmox
 date: 2021-03-06
 author: Paulo
-categories: linux, openvpn, turnkey
+tags: linux, openvpn, turnkey
 ---
 
 Usando o template turnkey no proxmox para criar um servidor openvpn, após a sua configuração de acordo com os passos da instalação do container, poderemos deparar-nos com um erro em que os clientes de VPN não se conseguem ligar.

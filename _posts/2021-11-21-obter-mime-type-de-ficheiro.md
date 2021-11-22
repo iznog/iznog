@@ -3,7 +3,7 @@ layout: post
 title: Obter mime type de ficheiro
 date: 2021-11-21
 author: Paulo
-categories: linux
+tags: linux
 ---
 
 Já aconteceu um determinado ficheiro aparentar ser de um determinado formato mas a aplicação que usamos não o consegue manipular?
