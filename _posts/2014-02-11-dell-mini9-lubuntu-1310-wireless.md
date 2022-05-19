@@ -2,7 +2,7 @@
 layout: post
 title: instalação de driver wireless DELL mini9
 date: 2014-02-11
-categories: linux
+tags: linux
 author: Paulo Cruz
 ---
 A instalação do Lubuntu 13.10 no netbook DELL mini 9, decorreu sem sobressaltos, excepto no caso dos drivers para wireless, em que é necessário efectuar o download e instalação do firware da placa em causa

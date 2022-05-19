@@ -2,7 +2,7 @@
 layout: post
 title: Erro de ligacao ao servidor de licenças pelos add-ons
 date: 2015-03-09
-categories: SAP B1
+tags: SAP B1
 ---
 Após instalação do cliente de SAP B1 em Windows Server 2008 R2 e instalação sem quaisquer contratempos dos respectivos add-ons disponiveis, para a empresa em uso, os add-ons davam erro a iniciar, com mensagem de erro relacionada com a impossibilidade de se ligarem ao servidor de licenças.
 

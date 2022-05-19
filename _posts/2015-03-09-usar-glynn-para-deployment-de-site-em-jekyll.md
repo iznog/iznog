@@ -2,7 +2,7 @@
 layout: post
 title: Fazer o upload do site criado com o jekyll de forma facil com o glynn
 date: 2015-03-09
-categories: jekyll
+tags: jekyll
 ---
 Para não ter que efectuar o upload do site manualmente para o alojamento por FTP, após efectuar o "build" do mesmo com o jekyll, acabei por encontrar referenciado no site do [jekyll] (http://jekyllrb.com) o projecto glynn de [Damien MATHIEU] (https://github.com/dmathieu/glynn) que permite fazer o build do site e o upload apenas com o comando "glynn", simplificando bastante o processo.
 

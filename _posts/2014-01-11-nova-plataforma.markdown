@@ -2,6 +2,7 @@
 title: Nova plataforma do site
 layout: post
 date: 2014-01-11
+tags: markdown
 ---
 
 # Nova plataforma do site

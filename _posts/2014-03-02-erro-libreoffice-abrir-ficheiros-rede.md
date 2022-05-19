@@ -2,7 +2,7 @@
 layout: post
 title: Libreoffice erro abrir ficheiros rede no KDE
 date: 2014-03-02
-categories: libreoffice
+tags: libreoffice
 ---
 Se ao tentar abrir ficheiros com o libreoffice no KDE de um recurso da rede, nada acontece, pode dever-se a um bug existente e reportado [aqui](https://www.libreoffice.org/bugzilla/show_bug.cgi?id=67527), sendo que já referi o mesmo no meu [post]({%post_url 2013-11-19-libreoffice-4-1-do-ppa-de-libreoffice-org-erro-abrir-ficheiro-de-partilha-samba%}).
 

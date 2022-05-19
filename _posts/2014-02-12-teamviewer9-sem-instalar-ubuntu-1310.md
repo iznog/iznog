@@ -3,7 +3,7 @@ layout: post
 title: Utilizacao do teamviewer 9 sem instalar
 date: 2014-02-12
 author: Paulo Cruz
-categories: ubuntu
+tags: ubuntu
 ---
 O [Teamviewer](http://www.teamviewer.com) é um software de assistência remota útil quando precisar de ajudar um(a) amigo(a) ou precisar de ajuda. A sua utilização individual é gratuita (o que não se aplica para uso profissional).
 

@@ -2,7 +2,7 @@
 layout: post
 title: Windows 10 - Alterar password de utilizador
 date: 2017-02-18
-categories: jekyll
+tags: jekyll
 ---
 Esqueceram-se da vossa password do Windows? E agora?
 

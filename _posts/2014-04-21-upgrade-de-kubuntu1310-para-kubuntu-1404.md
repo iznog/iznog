@@ -2,7 +2,7 @@
 layout: post
 title: Upgrade de Kubuntu 13.10 para Kubuntu 14.04
 date: 2014-04-21
-categories: Kubuntu
+tags: Kubuntu
 ---
 À cerca de 1 semana efetuei o upgrade do Ubuntu 13.10 para a versão 14.04 num dos computadores que uso profissionalmente, nessa altura ainda para ultima versão beta, tendo decorrido sem qualquer problema.
 
