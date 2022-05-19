@@ -3,7 +3,7 @@ layout: post
 author: Paulo Cruz
 title: SCRCPY - mostrar e controlar dispositivo android no linux
 date: 2020-08-18
-tags: linux, android, scrcpy
+tags: linux android scrcpy
 ---
 
 Tal como refere na página do projeto [scrcpy](https://github.com/Genymobile/scrcpy):

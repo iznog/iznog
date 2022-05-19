@@ -3,7 +3,7 @@ layout: post
 title: Configurar MySQL Server no ubuntu server 
 date: 2021-01-15
 author: Paulo
-categories: linux, mysql
+categories: linux mysql
 ---
 
 Nas versões mais recentes do Ubuntu ao instalarmos o MySQL Server não é possivel aceder ao utilizador do root com password sem ser no utilizador root do sistema operativo.

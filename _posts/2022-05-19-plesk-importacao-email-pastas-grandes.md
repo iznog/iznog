@@ -3,7 +3,7 @@ layout: post
 title: Plesk - importação de email - pastas grandes
 date: 2022-05-19
 author: Paulo
-categories: linux, plesk, email
+categories: linux plesk email
 ---
 
 Ao importar caixas de correio que contêm pastas com muitos emails, a ferramenta de importação pode falhar a efetuar a sincronização.
