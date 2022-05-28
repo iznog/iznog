@@ -11,9 +11,7 @@ Ao acedermos a primeira vez ao crontab, passamos pelo passo de selecionar o edit
 Se pretendermos mudar mais tarde para outro editor, no ubuntu, podemos usar o comando:
 
 {% highlight bash %}
-  
   select-editor
-
 {% endhighlight %}
 
 Este comando apresentar-nos-á o menu para selecionarmos o editor que pretendemos.
